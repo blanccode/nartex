@@ -3,173 +3,186 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nartex-Berlin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="styles.css">
     <script defer src="app.js"></script>
 </head>
 
 <body>
-    <header id="home">
+    <div class="site-wrapper">
+        <header id="home">
 
-        <nav class="nav">
-            <div class="logo-container">
-                <img src="images/Logo.png" alt="" class="logo" width="120px">
-            </div>
+            <nav class="nav">
+                <div class="logo-container">
+                    <img src="images/Logo.png" alt="" class="logo" width="120px">
+                </div>
 
-            <ul class="nav-links">
+                <ul class="nav-links">
 
-                <li class="1"><a href="#home">Home</a></li>
-                <li class="3"><a href="#about">About</a></li>
-                <li class="2"><a href="">Credentials</a></li>
-                <li class="4"><a href="#footer">Contact</a></li>
+                    <li class="1"><a href="#home">Home</a></li>
+                    <li class="3"><a href="#about">About</a></li>
+                    <li class="2"><a href="">Credentials</a></li>
+                    <li class="4"><a href="#footer">Contact</a></li>
 
-            </ul>
+                </ul>
 
-            <span id="dot"></span>
+                <span id="dot"></span>
 
-            <div class="burger">
-                <div class="1-line lines"></div>
-                <div class="2-line lines"></div>
-                <div class="3-line lines"></div>
-            </div>
-        </nav>
+                <div class="burger">
+                    <div class="1-line lines"></div>
+                    <div class="2-line lines"></div>
+                    <div class="3-line lines"></div>
+                </div>
+            </nav>
 
-    </header>
+        </header>
 
-    <section class="hero-wrap">
-        <div class="container">
-            <h1 id="first-h1">Für uns ist Kleidung mehr als nur Stoff.. <span> Kleidung ist
-                    Identität</span>
-            </h1>
-            <div class="btn-container">
-                <a href="" class="hero-button button-accent">Erfahre mehr
-                    <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="21" height="26" fill="url(#pattern0)" />
-                        <defs>
-                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use xlink:href="#image0" transform="translate(-0.119048) scale(0.0386905 0.03125)" />
-                            </pattern>
-                            <image id="image0" width="32" height="32"
-                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOUlEQVRYw8WXwUrEQAyGE0+yiJh5GPEgnsQqi/iwUkQRlUX24MPMPwdRT8ZLhXUp26Sd2Bybof83/4RMhsgQABYAWgCXlvVVI+d8AOC5lKIAPgFc1Pw/D+z8kIhaZj79/aaqX0R0IyIPoQA55yNmvmPmk+1cB3EtIo9TAfbG5Jl5n4huAZyHObDhwj0zH/flazjBQwsMEB8dxFMIQDSECcABsRSRlxCAKAgXgAPiSkRWIQC1IYb6QG+klIqqNqr61rsr5gURtQDOQhxwOPHeOfEaAlADYjKAA6IRkfV2blQN1IzJAI4jWPflZy/C0Q4YxZe7xEc7ULMRzd6KXUfguIxM4i4Hoq5jkwOOgcQlbnJg1pFs1qH0P8SJhmvgO1J8J0BKqRBRo6p/OtnG02yyuCmiH6emiHye/wChgiSIMlDi6gAAAABJRU5ErkJggg==" />
-                        </defs>
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-    </section class="section1">
-    <div class="dot-container">
-        <div class="dot1"></div>
-        <div class="dot2"></div>
-        <div class="dot3"></div>
-        <div class="dot4"></div>
-    </div>
-
-
-    <section>
-        <div class="card card1">
-            <div class="container">
-                <h1>Was wir tun..</h1>
-                <p>
-                    Kennst du das wenn du wieder etliche Kleidung aufgesammelt hast wo du schon genau weißt das du sie
-                    eh nie anziehen wirst, die nur bei dir rumliegen und Platz rauben?
-                    Kein Problem, wir verwerten deine kleidung.
-                </p>
-                <a href="" class="button button-accent">Kontakt</a>
-
-            </div>
-            <div class="card-child"></div>
-        </div>
-
-        <img id="karton" src="images/kartons.svg" alt="">
-
-
-    </section>
-
-    <section id="about" class="section2">
-        <div class="card2 card">
-            <div class="container">
-                <h1>
-                    Qualität hat nicht immer seinen Preis..
+        <img class="hero-wrap section1" src="images/kleider.jpg" 
+            srcset="images/kleider-phone.jpg 780w,
+                    images/kleider.jpg 1024w
+                     
+                " >
+            
+        <div class="hero-div ">
+            <div class="hero-text-container container">
+                <h1 id="first-h1">Für uns ist Kleidung mehr als nur Stoff.. <span> Kleidung ist
+                        Identität</span>
                 </h1>
-                <p>
-                    Unser Unternehmen ist in dem Bereich „Kleider An- und Verkauf“ seit langen Jahren mit einem
-                    professionellen und
-                    umweltorientierten Einsatz tätig.
-
-                    Wir kaufen und verkaufen Altkleider & Schuhe in Berlin und Umgebung, und bieten diese unsortiert ab
-                    Kiloweise national
-                    und international mit bestmöglichen Preisen zum Verkauf. Dabei achten wir besonders auf die Qualität
-                    und die Sauberkeit
-                    von gebrauchten Kleider und Schuhe.
-                </p>
+                <div class="btn-container">
+                    <a href="" class="hero-button button-accent">Erfahre mehr
+                        <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="21" height="26" fill="url(#pattern0)" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0"
+                                        transform="translate(-0.119048) scale(0.0386905 0.03125)" />
+                                </pattern>
+                                <image id="image0" width="32" height="32"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOUlEQVRYw8WXwUrEQAyGE0+yiJh5GPEgnsQqi/iwUkQRlUX24MPMPwdRT8ZLhXUp26Sd2Bybof83/4RMhsgQABYAWgCXlvVVI+d8AOC5lKIAPgFc1Pw/D+z8kIhaZj79/aaqX0R0IyIPoQA55yNmvmPmk+1cB3EtIo9TAfbG5Jl5n4huAZyHObDhwj0zH/flazjBQwsMEB8dxFMIQDSECcABsRSRlxCAKAgXgAPiSkRWIQC1IYb6QG+klIqqNqr61rsr5gURtQDOQhxwOPHeOfEaAlADYjKAA6IRkfV2blQN1IzJAI4jWPflZy/C0Q4YxZe7xEc7ULMRzd6KXUfguIxM4i4Hoq5jkwOOgcQlbnJg1pFs1qH0P8SJhmvgO1J8J0BKqRBRo6p/OtnG02yyuCmiH6emiHye/wChgiSIMlDi6gAAAABJRU5ErkJggg==" />
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <img class="lkw" src="images/lkw.svg" alt="">
-        <img id="bubble-left" src="images/bubble-left.svg" alt="">
+        <div class="dot-container">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+            <div class="dot4"></div>
+        </div>
 
-    </section>
 
-    <section class="section3">
-        <div class="card3 card">
-
-            <div class="flex-row" id="first-row">
-                <img src="images/kleider2.jpg" alt="">
+        <section>
+            <div class="card card1">
                 <div class="container">
-                    <h1>Kleidung jeder Art</h1>
+                    <h1>Was wir tun..</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore et
-                        lor sit amlabore et dolore magna aliquyam erat.
+                        Kennst du das wenn du wieder etliche Kleidung aufgesammelt hast wo du schon genau weißt das du
+                        sie
+                        eh nie anziehen wirst, die nur bei dir rumliegen und Platz rauben?
+                        Kein Problem, wir verwerten deine kleidung.
+                    </p>
+                    <a href="" class="button button-accent">Kontakt</a>
+
+                </div>
+                <div class="card-child"></div>
+            </div>
+
+            <img id="karton" src="images/kartons.svg" alt="">
+
+
+        </section>
+
+        <section id="about" class="section2">
+            <div class="card2 card">
+                <div class="container">
+                    <h1>
+                        Qualität hat nicht immer seinen Preis..
+                    </h1>
+                    <p>
+                        Unser Unternehmen ist in dem Bereich „Kleider An- und Verkauf“ seit langen Jahren mit einem
+                        professionellen und
+                        umweltorientierten Einsatz tätig.
+
+                        Wir kaufen und verkaufen Altkleider & Schuhe in Berlin und Umgebung, und bieten diese unsortiert
+                        ab
+                        Kiloweise national
+                        und international mit bestmöglichen Preisen zum Verkauf. Dabei achten wir besonders auf die
+                        Qualität
+                        und die Sauberkeit
+                        von gebrauchten Kleider und Schuhe.
                     </p>
                 </div>
             </div>
 
-            <div class="flex-row" id="second-row">
-                <img src="images/schuhe.jpg" alt="">
-                <div class="container">
+            <img class="lkw" src="images/lkw.svg" alt="">
+            <img id="bubble-left" src="images/bubble-left.svg" alt="">
 
-                    <h1>Schuhe</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore et
-                        lor sit amlabore et dolore magna aliquyam erat.
-                    </p>
+        </section>
+
+        <section class="section3">
+            <div class="card3 card">
+
+                <div class="flex-row" id="first-row">
+                    <img src="images/kleider2.jpg" alt="">
+                    <div class="container">
+                        <h1>Kleidung jeder Art</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt
+                            ut
+                            labore et
+                            lor sit amlabore et dolore magna aliquyam erat.
+                        </p>
+                    </div>
                 </div>
+
+                <div class="flex-row" id="second-row">
+                    <img src="images/schuhe.jpg" alt="">
+                    <div class="container">
+
+                        <h1>Schuhe</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt
+                            ut
+                            labore et
+                            lor sit amlabore et dolore magna aliquyam erat.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <img id="bubble-right" src="images/bubble-right.svg" alt="">
+
+        </section>
+
+        <footer id="footer">
+            <div class="icon-wrapper">
+                <img src="images/email 1.png" class="icons"></img>
+                <a class="footer-text" href="mailto:info@nartex-berlin.de">info@nartex-berlin.de</a>
+            </div>
+            <div class="icon-wrapper">
+                <img src="images/telefon.png" class="icons"></img>
+                <a class="footer-text" href="tel:03040785509">(030) 407 85 509.</a>
+            </div>
+            <div class="icon-wrapper">
+                <img src="images/lage.png" id="location-icon" class="icons"></img>
+                <div class="footer-text ">Martin-Luther-Str. 27 10777</div>
             </div>
 
-        </div>
-        <img id="bubble-right" src="images/bubble-right.svg" alt="">
-
-    </section>
-
-    <footer id="footer">
-        <div class="icon-wrapper">
-            <img src="images/email 1.png" class="icons"></img>
-            <a class="footer-text" href="mailto:info@nartex-berlin.de">info@nartex-berlin.de</a>
-        </div>
-        <div class="icon-wrapper">
-            <img src="images/telefon.png" class="icons"></img>
-            <a class="footer-text" href="tel:03040785509">(030) 407 85 509.</a>
-        </div>
-        <div class="icon-wrapper">
-            <img src="images/lage.png" class="icons"></img>
-            <div class="footer-text ">Martin-Luther-Str. 27 10777</div>
-        </div>
-
-        <div class="firm-name">Nartex-Berlin GmbH & Co. KG ©</div>
-    </footer>
+            <div class="firm-name">Nartex-Berlin GmbH & Co. KG ©</div>
+        </footer>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    </div>
 </body>
 
 </html>
