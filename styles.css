@@ -28,7 +28,8 @@ body {
 }
 
 .site-wrapper {
-  overflow-x: hidden !important;
+  overflow: hidden !important;
+  position: absolute;
 }
 
 img {
@@ -190,7 +191,6 @@ nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 40%;
 }
 
 ul {
@@ -216,30 +216,36 @@ li a {
 }
 
 #dot {
-  display: none;
-  position: relative;
-  top: 35px;
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 110px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: var(--btn-color);
 }
 
+.nav-links li:nth-child(1):hover ~ #dot {
+  opacity: 1;
+}
+
 .nav-links li:nth-child(2):hover ~ #dot {
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
+  opacity: 1;
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
 }
 
 .nav-links li:nth-child(3):hover ~ #dot {
-  -webkit-transform: translateX(75px);
-          transform: translateX(75px);
+  opacity: 1;
+  -webkit-transform: translateX(320px);
+          transform: translateX(320px);
 }
 
 .nav-links li:nth-child(4):hover ~ #dot {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  opacity: 1;
+  -webkit-transform: translateX(510px);
+          transform: translateX(510px);
 }
 
 .burger {
@@ -253,7 +259,7 @@ li a {
   -ms-flex-item-align: center;
       align-self: center;
   height: 3px;
-  width: 2.2em;
+  width: 2em;
   background-color: white;
   margin: 6px;
   border-radius: 5px;
