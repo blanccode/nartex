@@ -8,11 +8,12 @@
     transition: all ease-in-out 250ms;
 }
 
-    $main-bg-color: #1E3D49;
-    $secondary-color: #264653;
-    $accent-color: #F4A261;
-    $text-color: #EFEFEF;
-    $btn-color: #FB8B24;
+    $main-bg-color: #70A78C;
+    $cart-bg-color: rgb(151, 202, 176);
+    $secondary-color: rgb(131, 180, 156);
+    $accent-color: #E07A5F;
+    $text-color: #3D405B;
+    $btn-color: #E07A5F;
 
 
 
@@ -29,6 +30,7 @@ body {
     // overflow-x: hidden;
 
 }
+
 
 .btn-wrapper {
     position: fixed;
@@ -92,15 +94,24 @@ img {
     height: auto;
 }
 
-p {
+p { 
+    font-weight: 450;
     color: $text-color;
     margin-top: 1em;
     line-height: 23px;
 }
 
-h1,
-footer {
+h1 {
+    color: $text-color;
+}
+
+h1#first-h1 {
     color: #FDFDFD;
+}
+
+
+footer {
+    color: #F1F1F1;
 }
 
 a {
@@ -132,12 +143,7 @@ h1::before {
 
 img.hero-wrap {
     text-align: center;
-    // background: rgba(92, 70, 44, 0.4);
-    // background-image: url(images/kleider.jpg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-    // background-blend-mode: multiply;
+
     height: 80vh;
     width: 100vw;
     z-index: -2;
@@ -154,7 +160,7 @@ img.hero-wrap {
     left: 0;
     height: 80vh;
     width: 100vw;
-    background-color: rgba(61, 64, 91, 0.40);
+    background-color: rgba(61, 64, 91, 0.51);
     padding: 12em 2em;
     text-align: center;
 
@@ -165,7 +171,6 @@ img.hero-wrap {
 }
 
 .container {
-
 
     #first-h1::before {
         display: none;
@@ -188,7 +193,7 @@ span {
     border-style: solid;
     padding: .2em 1.75em;
     padding-top: -.5em;
-    color: $text-color;
+    color: #F1F1F1;
     padding-bottom: .6em;
     margin-top: 2em;
     // background-color: $btn-color;
@@ -294,7 +299,7 @@ li {
         display: block;
         height: 100%;
         width: 100%;
-        color: $text-color;
+        color: #F1F1F1;
         text-decoration: none;
         text-transform: uppercase;
     }
@@ -407,9 +412,10 @@ li {
         li {
             opacity: 0;
 
+
             a {
                 text-align: start;
-                color: rgb(216, 216, 216);
+                color: $text-color;
                 font-size: .9rem;
                 font-weight: 500;
             }
@@ -486,7 +492,7 @@ li {
 .card1::before {
     content: "";
     display: block;
-    background-color: #315462;
+    background-color: $cart-bg-color;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -503,7 +509,7 @@ li {
     font-weight: 500;
     padding: .4em 1.75em;
     padding-top: -.5em;
-    color: $text-color;
+    color: #F1F1F1;
     margin-top: 2em;
     background-color: $btn-color;
     border-radius: 20px;
@@ -719,10 +725,10 @@ footer {
     }
 
     .firm-name {
-        color: rgb(187, 187, 187);
+        color: $footer-color;
         padding: 1em 0 .7em;
         margin-top: auto;
-        background-color: rgb(27, 55, 66);
+        background-color: #65967e;
         width: 100vw;
         text-align: center;
         border-top-left-radius: 10%;

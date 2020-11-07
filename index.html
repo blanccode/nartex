@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="eng" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -48,6 +48,38 @@
             padding-bottom: .6em;
             margin-top: 2em;
         }
+
+        .eng-container {
+            display: none !important;
+        }
+
+        .eng .eng-container {
+            display: block !important;
+        }
+
+        .pol-container {
+            display: none !important;
+        }
+
+        .pol .pol-container {
+            display: block !important;
+        }
+
+        .flex-eng-container {
+            display: none !important;
+        }
+
+        .eng .flex-eng-container {
+            display: flex !important;
+        }
+
+        .flex-pol-container {
+            display: none !important;
+        }
+
+        .pol .flex-pol-container {
+            display: flex !important;
+        }
     </style>
     <!-- <script defer src="app.js"></script>  -->
 
@@ -56,18 +88,38 @@
 <body>
     <div class="site-wrapper">
         <header id="home">
+            <div class="btn-wrapper">
+                <div class="eng-btn lang" href="">
+                    <img src="images/eng-flag-op.jpg" width="35px" alt="">
+                </div>
+                <div class="pol-btn lang" href="">
+                    <img src="images/pol-flag-op.jpg" width="35px" alt="">
 
-            <nav class="nav">
+                </div>
+            </div>
+            <!-- <button class="pol-btn" href="">polnisch</button> -->
+            <nav class="pointer nav">
+
+
                 <div class="logo-container">
                     <img src="images/Logo.png" alt="" class="logo" width="120px" height="auto">
                 </div>
 
-                <ul class="nav-links">
+                <ul class="flex-eng-container nav-links">
 
                     <li class="1"><a href="#home">Home</a></li>
                     <li class="3"><a href="#about">About</a></li>
-                    <li class="2"><a href="">Credentials</a></li>
+                    <li class="2"><a href="#collection">Collection</a></li>
                     <li class="4"><a href="#footer">Contact</a></li>
+                    <div id="dot"></div>
+
+                </ul>
+                <ul class="flex-pol-container nav-links">
+
+                    <li class="1"><a href="#home">Strona główna</a></li>
+                    <li class="3"><a href="#about">O nas</a></li>
+                    <li class="2"><a href="#collection">Kolekcja</a></li>
+                    <li class="4"><a href="#footer">Kontakt</a></li>
                     <div id="dot"></div>
 
                 </ul>
@@ -86,12 +138,12 @@
                     images/kleider.webp 1024w" sizes="(min-width: 760px)" width="100vw" height="80vh">
 
         <div class="hero-div ">
-            <div class="hero-text-container container">
-                <h1 id="first-h1">Für uns ist Kleidung mehr als nur Stoff.. <span> Kleidung ist
-                        Identität</span>
+            <div class="eng-container hero-text-container container">
+                <h1 id="first-h1">Clothing is more than just fabric to us.. <span> clothing is
+                        identity</span>
                 </h1>
                 <div class="btn-container">
-                    <a href="" class="hero-button button-accent">Erfahre mehr
+                    <a href="#about" class="hero-button button-accent">learn more
                         <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="21" height="26" fill="url(#pattern0)" />
@@ -107,728 +159,59 @@
                     </a>
                 </div>
             </div>
+            <div class="pol-container hero-text-container container">
+                <h1 id="first-h1">Odzież to dla nas coś więcej niż tkanina..<span> Odzież to tożsamość</span>
+                </h1>
+                <div class="btn-container">
+                    <a href="#about" class="hero-button button-accent">DOWIEDZ SIĘ WIĘCEJ
+
+                        <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="21" height="26" fill="url(#pattern0)" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0"
+                                        transform="translate(-0.119048) scale(0.0386905 0.03125)" />
+                                </pattern>
+                               
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="dot-container">
+        <!-- <div class="dot-container">
             <div class="dot1"></div>
             <div class="dot2"></div>
             <div class="dot3"></div>
             <div class="dot4"></div>
-        </div>
+        </div> -->
+        <link id="stylesheet" rel="stylesheet" href="styles.css">
 
-        <style>
-            @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900");
-
-            * {
-                margin: 0px;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                font-family: 'Roboto', sans-serif;
-                font-family: 'Raleway', sans-serif;
-                -webkit-transition: all ease-in-out 250ms;
-                transition: all ease-in-out 250ms;
-            }
-
-            :root {
-                --main-bg-color: #1E3D49;
-                --secondary-color: #264653;
-                --accent-color: #F4A261;
-                --text-color: #EFEFEF;
-                --btn-color: #FB8B24;
-            }
-
-            html,
-            body {
-                overflow-x: hidden !important;
-            }
-
-            body {
-                background-color: var(--main-bg-color);
-                max-width: 100vw;
-            }
-
-            .site-wrapper {
-                overflow: hidden !important;
-                position: absolute;
-            }
-
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            p {
-                color: var(--text-color);
-                margin-top: 1em;
-                line-height: 23px;
-            }
-
-            h1,
-            footer {
-                color: #F1F1F1;
-            }
-
-            a {
-                color: #F1F1F1;
-                text-decoration: none;
-            }
-
-            .container {
-                width: 95%;
-                max-width: 70em;
-                margin: 0 auto;
-            }
-
-            h1::before {
-                content: "";
-                display: block;
-                width: 10px;
-                height: 30px;
-                background-color: var(--accent-color);
-                position: relative;
-                top: 30px;
-                left: -20px;
-                border-radius: 10px;
-            }
-
-            img.hero-wrap {
-                text-align: center;
-                height: 80vh;
-                width: 100vw;
-                z-index: -2;
-                -o-object-fit: cover;
-                object-fit: cover;
-                -o-object-fit: fill;
-                object-fit: fill;
-            }
-
-            .hero-div {
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                height: 80vh;
-                width: 100vw;
-                background-color: rgba(61, 64, 91, 0.4);
-                padding: 12em 2em;
-                text-align: center;
-            }
-
-            .hero-div .hero-text-container {
-                -webkit-transform: rotateZ(0.2deg);
-                transform: rotateZ(0.2deg);
-            }
-
-            .container #first-h1::before {
-                display: none;
-            }
-
-            span {
-                color: white;
-                font-size: 1.2em;
-            }
-
-            .hero-button {
-                display: inline-block;
-                font-size: 1.15rem;
-                font-weight: 500;
-                text-decoration: none;
-                text-transform: uppercase;
-                border-width: 2px;
-                border-radius: 30px;
-                border-style: solid;
-                padding: .2em 1.75em;
-                padding-top: -.5em;
-                color: var(--text-color);
-                padding-bottom: .6em;
-                margin-top: 2em;
-            }
-
-            @media (min-width: 60rem) {
-                img.hero-wrap {
-                    height: 100vh !important;
-                    background-position: initial;
-                    width: 100vw;
-                    position: relative;
-                }
-
-                .hero-div {
-                    padding: 23em 5em;
-                    height: 100vh;
-                    font-size: larger;
-                }
-
-                .hero-div h1 {
-                    font-size: 1.7em;
-                }
-
-                p {
-                    font-size: 1.2rem;
-                    line-height: 1.6;
-                }
-
-                .title {
-                    font-size: 3.7rem;
-                }
-            }
-
-            @media (min-width: 75rem) {
-                .hero-div h1 {
-                    padding: 0em 10em;
-                }
-            }
-
-            svg {
-                position: relative;
-                top: 6px;
-                margin-left: .25em;
-            }
-
-            section {
-                width: 100%;
-                min-height: 200px;
-            }
-
-            nav {
-                position: absolute;
-                color: white;
-                background-color: rgba(255, 192, 203, 0);
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                min-height: 8vh;
-                width: 100vw;
-                -ms-flex-pack: distribute;
-                justify-content: space-around;
-                font-weight: 600;
-                padding-top: 1em;
-                z-index: 2;
-            }
-
-            .nav-links {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: space-evenly;
-                -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
-                /* width: 40%; */
-            }
-
-            ul {
-                position: relative;
-            }
-
-            li {
-                list-style: none;
-                margin: 0 1em;
-                width: 100%;
-                text-align: center;
-            }
-
-            li a {
-                padding: 2em;
-                cursor: pointer;
-                display: block;
-                height: 100%;
-                width: 100%;
-                color: var(--text-color);
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            #dot {
-                opacity: 0;
-                position: absolute;
-                top: 60px;
-                left: 110px;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                transition-duration: .2s;
-                background-color: var(--btn-color);
-            }
-            
-
-            .nav-links li:nth-child(1):hover~#dot {
-                opacity: 1;
-            }
-
-            .nav-links li:nth-child(2):hover~#dot {
-                opacity: 1;
-                -webkit-transform: translateX(150px);
-                transform: translateX(150px);
-            }
-
-            .nav-links li:nth-child(3):hover~#dot {
-                opacity: 1;
-                -webkit-transform: translateX(320px);
-                transform: translateX(320px);
-            }
-
-            .nav-links li:nth-child(4):hover~#dot {
-                opacity: 1;
-                -webkit-transform: translateX(510px);
-                transform: translateX(510px);
-            }
-
-            .burger {
-                display: none;
-            }
-
-            .burger .lines {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-item-align: center;
-                align-self: center;
-                height: 3px;
-                width: 2em;
-                background-color: white;
-                margin: 6px;
-                border-radius: 5px;
-            }
-
-            @media (max-width: 60em) {
-                .logo {
-                    width: 100px;
-                }
-
-                .burger {
-                    display: block;
-                    z-index: 999999;
-                    padding: .5em;
-                }
-
-                nav::before {
-                    content: "";
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    background-color: rgba(0, 0, 0, 0.404);
-                    z-index: 999;
-                    opacity: 0;
-                    -webkit-transform: scale(0);
-                    transform: scale(0);
-                    -webkit-transition: opacity .5s;
-                    transition: opacity .5s;
-                }
-
-                .nav-links {
-                    position: absolute;
-                    right: 0px;
-                    top: 0;
-                    height: 100vh;
-                    z-index: 1000;
-                    background-color: var(--main-bg-color);
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-orient: vertical;
-                    -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
-                    flex-direction: column;
-                    right: -100%;
-                    -webkit-transition: right 0.5s;
-                    transition: right 0.5s;
-                    width: 50%;
-                    padding-left: 2em;
-                }
-
-                .nav-links li {
-                    opacity: 0;
-                }
-
-                .nav-links li a {
-                    text-align: start;
-                    color: #d8d8d8;
-                    font-size: .9rem;
-                    font-weight: 500;
-                }
-
-                .open nav::before {
-                    opacity: 1;
-                    -webkit-transform: scale(1);
-                    transform: scale(1);
-                }
-
-                .open .nav-links {
-                    right: 0%;
-                }
-
-                html.open {
-                    position: fixed;
-                }
-
-                @-webkit-keyframes linkFade {
-                    from {
-                        opacity: 0;
-                        -webkit-transform: translateX(50px);
-                        transform: translateX(50px);
-                    }
-
-                    to {
-                        opacity: 1;
-                        translat: transformX(0px);
-                    }
-                }
-
-                @keyframes linkFade {
-                    from {
-                        opacity: 0;
-                        -webkit-transform: translateX(50px);
-                        transform: translateX(50px);
-                    }
-
-                    to {
-                        opacity: 1;
-                        translat: transformX(0px);
-                    }
-                }
-            }
-
-            .dot1,
-            .dot2,
-            .dot3,
-            .dot4 {
-                background-color: #264653e8;
-                width: 10px;
-                height: 10px;
-                border-radius: 100%;
-                margin: .5em;
-            }
-
-            .dot-container {
-                position: absolute;
-                left: 50%;
-                bottom: -5px;
-                -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
-            }
-
-            .card {
-                background-color: var(--secondary-color);
-                border-radius: 20px;
-                padding: 4em;
-            }
-
-            .card1 {
-                position: relative;
-                width: 50%;
-                top: -75px;
-                -webkit-box-flex: .6;
-                -ms-flex: .6;
-                flex: .6;
-            }
-
-            .card1::before {
-                content: "";
-                display: block;
-                background-color: #315462;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 40px;
-                left: 70px;
-                z-index: -1;
-                border-radius: 20px;
-            }
-
-            .button {
-                display: inline-block;
-                font-size: 1.25rem;
-                text-decoration: none;
-                font-weight: 500;
-                padding: .4em 1.75em;
-                padding-top: -.5em;
-                color: var(--text-color);
-                margin-top: 2em;
-                background-color: var(--btn-color);
-                border-radius: 20px;
-            }
-
-            section {
-                padding: 4em;
-                padding-bottom: 2.5em;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-between;
-                padding-bottom: 4em;
-            }
-
-            img:not(:first-child):not(.hero-wrap) {
-                margin-top: 3em;
-                width: 30%;
-                height: auto;
-                margin: 0 auto;
-                -webkit-transform: translateX(40px);
-                transform: translateX(40px);
-            }
-
-            @media (max-width: 60em) {
-                section {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-orient: vertical;
-                    -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
-                    flex-direction: column;
-                    padding: 3em;
-                    padding-bottom: 1em;
-                }
-
-                section .card1 {
-                    width: 110%;
-                    padding: 2em 2em;
-                    padding-top: 1.5em;
-                    padding-right: 2.5em;
-                    position: relative;
-                    top: -70px;
-                    left: -2em;
-                    border-radius: 20px;
-                }
-
-                section .card1::before {
-                    left: 35px;
-                }
-
-                img:not(:first-child):not(.hero-wrap) {
-                    width: 220px;
-                    -webkit-transform: translateX(-5px);
-                    transform: translateX(-5px);
-                }
-            }
-
-            .section2 {
-                padding-top: 1em;
-                padding: 1em;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                position: relative;
-            }
-
-            .section2 .card2 {
-                -webkit-box-flex: .7;
-                -ms-flex: .7;
-                flex: .7;
-                padding: 1.75em;
-            }
-
-            .section2 .lkw {
-                margin-top: 3em;
-            }
-
-            #bubble-left {
-                position: absolute;
-                left: -5em;
-                top: 23em;
-                z-index: -1;
-            }
-
-            @media (min-width: 60em) {
-                #bubble-left {
-                    margin-left: -2.5em;
-                    top: 10em;
-                }
-
-                .section2 {
-                    padding-top: 4em;
-                    -webkit-box-orient: horizontal;
-                    -webkit-box-direction: normal;
-                    -ms-flex-direction: row;
-                    flex-direction: row;
-                    flex-direction: row-reverse;
-                }
-            }
-
-            .section3 {
-                padding: 0em;
-                overflow: hidden;
-            }
-
-            .section3 .card3 {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                padding: 2em;
-            }
-
-            .section3 .card3 .container {
-                padding-top: 0;
-                padding-bottom: 3em;
-            }
-
-            .section3 .card3 img {
-                width: 100%;
-            }
-
-            #bubble-right {
-                position: absolute;
-                right: 0;
-                z-index: -1;
-            }
-
-            @media (min-width: 70em) {
-                .section3 {
-                    padding: 4em;
-                    padding-top: 7em;
-                }
-
-                .card3 {
-                    -webkit-box-flex: .85;
-                    -ms-flex: .85;
-                    flex: .85;
-                    margin-left: -4em;
-                }
-
-                .card3 .container {
-                    width: 50%;
-                    padding: 1em;
-                    padding-left: 4em;
-                }
-
-                .card3 img {
-                    -webkit-box-flex: 1;
-                    -ms-flex: 1;
-                    flex: 1;
-                }
-
-                #first-row {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-pack: end;
-                    -ms-flex-pack: end;
-                    justify-content: flex-end;
-                }
-
-                #second-row {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-orient: horizontal;
-                    -webkit-box-direction: reverse;
-                    -ms-flex-direction: row-reverse;
-                    flex-direction: row-reverse;
-                }
-
-                #second-row .container {
-                    padding-left: 2em;
-                }
-            }
-
-            footer {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                padding: 5em 0 0 0;
-                letter-spacing: 1px;
-                color: #ebebeb;
-            }
-
-            footer a {
-                color: #ebebeb;
-            }
-
-            footer .firm-name {
-                color: #bbbbbb;
-                padding: 1em 0 .7em;
-                margin-top: auto;
-                background-color: #1b3742;
-                width: 100vw;
-                text-align: center;
-                border-top-left-radius: 10%;
-                border-top-right-radius: 10%;
-                font-size: .85rem;
-                margin-top: 3em;
-            }
-
-            footer .icon-wrapper {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                -ms-flex-line-pack: center;
-                align-content: center;
-                margin-bottom: 1.5em;
-            }
-
-            footer .icon-wrapper .icons {
-                margin-right: 1em;
-            }
-
-            footer .icon-wrapper .footer-text {
-                text-align: center;
-                margin: auto;
-            }
-
-            @media (max-width: 60em) {
-                footer {
-                    font-size: .9em;
-                }
-
-                footer .firm-name {
-                    font-size: .75rem;
-                }
-
-                footer .icon-wrapper {
-                    margin-bottom: 1em;
-                }
-
-                footer .icon-wrapper .footer-text {
-                    text-align: center;
-                    margin: auto;
-                }
-
-                .icons:not(#location-icon) {
-                    width: 22px;
-                }
-
-                #location-icon {
-                    width: 29px;
-                }
-            }
-        </style>
         <section>
             <div class="card card1">
-                <div class="container">
-                    <h1>Was wir tun..</h1>
-                    <p>
-                        Kennst du das wenn du wieder etliche Kleidung aufgesammelt hast wo du schon genau weißt das du
-                        sie
-                        eh nie anziehen wirst, die nur bei dir rumliegen und Platz rauben?
-                        Kein Problem, wir verwerten deine kleidung.
+                <div class="eng-container container">
+                    <h1 class="eng">What we do..</h1>
+                    <p class="eng">
+                        As a world player that specializes in the sale of stock clothing, shoes
+                        and accessories, "Nartex" brings products sourced through our heart and
+                        mind to your showrooms. Our company was founded in.... and since then it
+                        is our quest to offer our customers consistent, quality graded clothing,
                     </p>
-                    <a href="" class="button button-accent">Kontakt</a>
+                    <a href="#footer" class="button button-accent">Contact</a>
 
                 </div>
+                <div class="pol-container container">
+                    <h1 class="pol">Co robimy..</h1>
+                    <p class="pol">
+                        Jako światowy gracz, który specjalizuje się w sprzedaży odzieży, butów i akcesoriów, „Nartex”
+                        dostarcza produkty pozyskiwane sercem i umysłem do Twoich salonów. Nasza firma powstała w .... i
+                        od tego czasu naszym celem jest oferowanie naszym klientom spójnej, jakościowej odzieży.
+                    </p>
+                    <a href="#footer" class="button button-accent">Kontakt</a>
+                </div>
+
                 <div class="card-child"></div>
             </div>
 
@@ -839,22 +222,29 @@
 
         <section id="about" class="section2">
             <div class="card2 card">
-                <div class="container">
+                <div class="eng-container container">
                     <h1>
-                        Qualität hat nicht immer seinen Preis..
+                        quality is not always expensive..
                     </h1>
-                    <p>
-                        Unser Unternehmen ist in dem Bereich „Kleider An- und Verkauf“ seit langen Jahren mit einem
-                        professionellen und
-                        umweltorientierten Einsatz tätig.
-
-                        Wir kaufen und verkaufen Altkleider & Schuhe in Berlin und Umgebung, und bieten diese unsortiert
-                        ab
-                        Kiloweise national
-                        und international mit bestmöglichen Preisen zum Verkauf. Dabei achten wir besonders auf die
-                        Qualität
-                        und die Sauberkeit
-                        von gebrauchten Kleider und Schuhe.
+                    <p class="eng">
+                        We distribute all over Europe. Our regular and large consignments of closeouts, exports,
+                        liquidated
+                        textiles, excess goods and customer returns, enable us to supply
+                        merchandise of exceptional quality at unmatchable prices to our customers.
+                        Whether you are an online store, an outlet mall, a high-end chain or an
+                        e-commerce business, come join a reliable wholesale supplier to cater to
+                        the needs of your retail customers.
+                    </p>
+                </div>
+                <div class="pol-container container">
+                    <h1 class="pol"> jakość nie zawsze jest droga..</h1>
+                    <p class="pol">
+                        Prowadzimy dystrybucję w całej Europie. Nasze regularne i duże przesyłki z zamknięciami,
+                        eksportami, zlikwidowanymi tekstyliami, nadwyżkami towarów i zwrotami od klientów, pozwalają nam
+                        dostarczać naszym klientom towary o wyjątkowej jakości po niezrównanych cenach. Niezależnie od
+                        tego, czy jesteś sklepem internetowym, centrum wyprzedażowym, siecią high-end, czy firmą
+                        zajmującą się handlem elektronicznym, dołącz do niezawodnego dostawcy hurtowego, aby zaspokoić
+                        potrzeby swoich klientów detalicznych.
                     </p>
                 </div>
             </div>
@@ -864,34 +254,43 @@
 
         </section>
 
-        <section class="section3">
+        <section id="collection" class="section3">
             <div class="card3 card">
 
                 <div class="flex-row" id="first-row">
                     <img src="images/kleider2.webp" alt="">
-                    <div class="container">
-                        <h1>Kleidung jeder Art</h1>
+                    <div class="eng-container container">
+                        <h1>clothing of all kinds</h1>
+                        <p class="eng">
+                            Our treasure trove includes famous brand-name clothes and attire for every occasion and
+                            season..
+                        </p>
+
+                    </div>
+                    <div class="pol-container container">
+                        <h1>odzież wszelkiego rodzaju</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt
-                            ut
-                            labore et
-                            lor sit amlabore et dolore magna aliquyam erat.
+                            W naszej skarbnicy znajdują się znane markowe ubrania i stroje na każdą okazję i porę roku.
                         </p>
                     </div>
                 </div>
 
                 <div class="flex-row" id="second-row">
                     <img src="images/schuhe.webp" alt="">
-                    <div class="container">
+                    <div class="eng-container container">
+                        <h1>for your feet</h1>
+                        <p class="eng">
+                            shoes ranging from
+                            Cinderella's sandals to cozy stylish boots, and accessories so unique, that
+                            would ensure constant traffic to your store.
+                        </p>
+                    </div>
 
-                        <h1>Schuhe</h1>
+                    <div class="pol-container container">
+                        <h1>dla twoich stóp</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt
-                            ut
-                            labore et
-                            lor sit amlabore et dolore magna aliquyam erat.
+                            buty począwszy od sandałów Kopciuszka po przytulne stylowe botki i dodatki tak wyjątkowe, że
+                            zapewniłyby stały ruch w Twoim sklepie.
                         </p>
                     </div>
                 </div>
@@ -918,69 +317,9 @@
             <div class="firm-name">Nartex-Berlin GmbH & Co. KG ©</div>
         </footer>
 
+        <script src="app.js"></script>
+        <script id="jquery" defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
-        <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script> -->
-        <script>
-            window.addEventListener("load", function () {
-                const burger = document.querySelector('.burger');
-
-                burger.addEventListener('click', openCloseMenu);
-
-
-                function openCloseMenu() {
-
-                    const html = document.querySelector('html');
-
-                    html.classList.toggle('open');
-
-                    // LINK ANIMATION
-                    links.forEach((link, index) => {
-                        linkAnimationCheck(link, index)
-                    })
-                }
-
-                const nav = document.querySelector('.nav-links');
-                const modal = document.querySelector('.nav');
-                const links = document.querySelectorAll('.nav-links li');
-                const a = nav.querySelectorAll('a');
-
-
-
-                function closeWithModal() {
-                    const html = document.querySelector('html');
-
-                    window.addEventListener('click', (e) => {
-                        if (e.target === modal) {
-
-                            html.classList.toggle('open')
-                            links.forEach((link, index) => {
-
-                                linkAnimationCheck(link, index)
-
-                            })
-                        }
-                    })
-
-                }
-                closeWithModal()
-
-
-
-                function linkAnimationCheck(link, index) {
-                    if (link.style.animation) {
-                        link.style.animation = ""
-                    } else {
-                        link.style.animation = `linkFade 0.5s ease forwards ${index / 7 + .3}s`
-                    }
-                }
-
-
-                a.forEach(link => {
-                    link.addEventListener('click', openCloseMenu)
-
-                });
-            });
-        </script>
     </div>
 
 
