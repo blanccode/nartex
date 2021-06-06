@@ -3,136 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="As a world player that specializes in the sale of stock clothing, &#34;Nartex&#34;
+    brings products like famouse brand-name clothes and stylish boots and shoes to your showrooms, Whether you are an online store, an outlet mall, a high-end chain or an
+    e-commerce business, come join a reliable wholesale supplier to cater to
+    the needs of your retail customers.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nartex-Berlin</title>
-    <!-- <link defer rel="stylesheet" href="styles.css"> -->
-
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
-    <style type="text/css">
-        img.hero-wrap {
-            text-align: center;
-            height: 80vh;
-            width: 100vw;
-            z-index: -2;
-            -o-object-fit: cover;
-            object-fit: cover;
-            -o-object-fit: fill;
-            object-fit: fill;
-        }
-
-        .hero-div {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 80vh;
-            width: 100vw;
-            background-color: rgba(61, 64, 91, 0.4);
-            padding: 12em 2em;
-            text-align: center;
-        }
-
-        .hero-button {
-            display: inline-block;
-            font-size: 1.15rem;
-            font-weight: 500;
-            text-decoration: none;
-            text-transform: uppercase;
-            border-width: 2px;
-            border-radius: 30px;
-            border-style: solid;
-            padding: .2em 1.75em;
-            padding-top: -.5em;
-            color: var(--text-color);
-            padding-bottom: .6em;
-            margin-top: 2em;
-        }
-
-        .eng-container {
-            display: none !important;
-        }
-
-        .eng .eng-container {
-            display: block !important;
-        }
-
-        .pol-container {
-            display: none !important;
-        }
-
-        .pol .pol-container {
-            display: block !important;
-        }
-
-        .flex-eng-container {
-            display: none !important;
-        }
-
-        .eng .flex-eng-container {
-            display: flex !important;
-        }
-
-        .flex-pol-container {
-            display: none !important;
-        }
-
-        .pol .flex-pol-container {
-            display: flex !important;
-        }
-    </style>
-    <!-- <script defer src="app.js"></script>  -->
-
+    <title>Nartex Berlin | Your stock clothing supplier</title>
+    <link id="stylesheet" rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <!-- Hotjar Tracking Code for http://nartex-berlin.de/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 2275810,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body>
     <div class="site-wrapper">
-        <header id="home">
-            <div class="btn-wrapper">
-                <div class="eng-btn lang" href="">
-                    <img src="images/eng-flag-op.jpg" width="35px" alt="">
-                </div>
-                <div class="pol-btn lang" href="">
-                    <img src="images/pol-flag-op.jpg" width="35px" alt="">
-
-                </div>
-            </div>
-            <!-- <button class="pol-btn" href="">polnisch</button> -->
-            <nav class="pointer nav">
-
-
-                <div class="logo-container">
-                    <img src="images/Logo.png" alt="" class="logo" width="120px" height="auto">
-                </div>
-
-                <ul class="flex-eng-container nav-links">
-
-                    <li class="1"><a href="#home">Home</a></li>
-                    <li class="3"><a href="#about">About</a></li>
-                    <li class="2"><a href="#collection">Collection</a></li>
-                    <li class="4"><a href="#footer">Contact</a></li>
-                    <div id="dot"></div>
-
-                </ul>
-                <ul class="flex-pol-container nav-links">
-
-                    <li class="1"><a href="#home">Strona główna</a></li>
-                    <li class="3"><a href="#about">O nas</a></li>
-                    <li class="2"><a href="#collection">Kolekcja</a></li>
-                    <li class="4"><a href="#footer">Kontakt</a></li>
-                    <div id="dot"></div>
-
-                </ul>
-
-
-                <div class="burger">
-                    <div class="1-line lines"></div>
-                    <div class="2-line lines"></div>
-                    <div class="3-line lines"></div>
-                </div>
-            </nav>
-
-        </header>
+        <?php
+        include_once './partials/header.php'
+        ?>
 
         <img class="hero-wrap section1" src="images/kleider.webp" srcset="images/kleider-phone.webp 780w,
                     images/kleider.webp 1024w" sizes="(min-width: 760px)" width="100vw" height="80vh">
@@ -173,7 +76,7 @@
                                     <use xlink:href="#image0"
                                         transform="translate(-0.119048) scale(0.0386905 0.03125)" />
                                 </pattern>
-                               
+
                             </defs>
                         </svg>
                     </a>
@@ -187,7 +90,6 @@
             <div class="dot3"></div>
             <div class="dot4"></div>
         </div> -->
-        <link id="stylesheet" rel="stylesheet" href="styles.css">
 
         <section>
             <div class="card card1">
@@ -197,7 +99,7 @@
                         As a world player that specializes in the sale of stock clothing, shoes
                         and accessories, "Nartex" brings products sourced through our heart and
                         mind to your showrooms. Our company was founded in.... and since then it
-                        is our quest to offer our customers consistent, quality graded clothing,
+                        is our quest to offer our customers consistent, quality graded clothing.
                     </p>
                     <a href="#footer" class="button button-accent">Contact</a>
 
@@ -215,7 +117,7 @@
                 <div class="card-child"></div>
             </div>
 
-            <img id="karton" src="images/kartons.svg" alt="">
+            <img id="karton" src="images/kartons.svg" alt="clothing packes">
 
 
         </section>
@@ -249,7 +151,7 @@
                 </div>
             </div>
 
-            <img class="lkw" src="images/lkw.svg" alt="">
+            <img class="lkw" src="images/lkw.svg" alt="'Nartex'-delivery-truck">
             <img id="bubble-left" src="images/bubble-left.svg" alt="">
 
         </section>
@@ -258,7 +160,7 @@
             <div class="card3 card">
 
                 <div class="flex-row" id="first-row">
-                    <img src="images/kleider2.webp" alt="">
+                    <img src="images/kleider2.webp" alt="shirts and jackets in diffrent styles and colors">
                     <div class="eng-container container">
                         <h1>clothing of all kinds</h1>
                         <p class="eng">
@@ -276,11 +178,11 @@
                 </div>
 
                 <div class="flex-row" id="second-row">
-                    <img src="images/schuhe.webp" alt="">
+                    <img src="images/schuhe.webp" alt="shoes and boots in many colors">
                     <div class="eng-container container">
                         <h1>for your feet</h1>
                         <p class="eng">
-                            shoes ranging from
+                            Shoes ranging from
                             Cinderella's sandals to cozy stylish boots, and accessories so unique, that
                             would ensure constant traffic to your store.
                         </p>
@@ -301,20 +203,22 @@
         </section>
 
         <footer id="footer">
-            <div class="icon-wrapper">
-                <img src="images/email 1.png" class="icons"></img>
-                <a class="footer-text" href="mailto:info@nartex-berlin.de">info@nartex-berlin.de</a>
-            </div>
-            <div class="icon-wrapper">
-                <img src="images/telefon.png" class="icons"></img>
-                <a class="footer-text" href="tel:03040785509">(030) 407 85 509.</a>
-            </div>
-            <div class="icon-wrapper">
-                <img src="images/lage.png" id="location-icon" class="icons"></img>
-                <div class="footer-text ">Martin-Luther-Str. 27 10777</div>
-            </div>
+                <div class="icon-wrapper">
+                    <img src="images/email 1.png" alt="email svg for contact" class="icons"></img>
+                    <a class="footer-text" href="mailto:info@nartex-berlin.de">info@nartex-berlin.de</a>
+                </div>
+                <div class="icon-wrapper">
+                    <img src="images/telefon.png" alt="svg of phone for calls" class="icons"></img>
+                    <a class="footer-text" href="tel:03040785509">(030) 407 85 509</a>
+                </div>
+                <div class="icon-wrapper">
+                    <img src="images/lage.png" alt="an svg of lacation of business" id="location-icon"
+                        class="icons"></img>
+                    <div class="footer-text ">Martin-Luther-Str. 27 10777</div>
+                </div>
 
-            <div class="firm-name">Nartex-Berlin GmbH & Co. KG ©</div>
+                <div class="firm-name">Nartex-Berlin GmbH & Co. KG ©</div>
+
         </footer>
 
         <script src="app.js"></script>
