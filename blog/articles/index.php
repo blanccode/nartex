@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nartex Berlin | Blog</title>
     <link id="stylesheet" rel="stylesheet" href="/nartex/blog/styles.css">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/nartex/blog/images/favicon.png">
     <!-- Hotjar Tracking Code for http://nartex-berlin.de/ -->
     <script>
         (function(h, o, t, j, a, r) {
@@ -38,12 +38,12 @@
     include $_SERVER["DOCUMENT_ROOT"] . '/nartex/blog/partials/header.php'
     ?>
     <section>
-        <img id="bubble-left" src="images/bubble-left.svg" alt="">
+        <img id="bubble-left" src="/nartex/blog/images/bubble-left.svg" alt="">
 
         <div class="card mainblock">
 
             <div class="flex-container">
-                <img class="article-image" src="./images/clothes.jpg" alt="">
+                <img class="article-image" src="/nartex/blog//images/clothes.jpg" alt="">
                 <p>
                     As a world player that specializes in the sale of stock clothing, shoes and accessories, "Nartex" brings products sourced through our heart and mind to your showrooms. Our company was founded in.... and since then it is our quest to offer our customers consistent, quality graded clothing.
                     <br>
@@ -58,11 +58,8 @@
 
         </div>
 
-        <?php
-        include "partials/article-section.php"
-        ?>
 
-        <img id="bubble-right" src="images/bubble-right.svg" alt="">
+        <img id="bubble-right" src="/nartex/blog/images/bubble-right.svg" alt="">
 
     </section>
 

@@ -1,26 +1,21 @@
 <?php
-include './scripts/autoloader.php';
-// spl_autoload_register('myAutoloader');
+include $_SERVER["DOCUMENT_ROOT"] . '/nartex/blog/scripts/autoloader.php';
 
-// function myAutoloader($className) {
-//     $path = "classes/";
-//     $extension = ".php";
-//     $fullPath = $path . $className . $extension;
-
-//     include_once $fullPath;
-
-// }
 
 $testObj = new Test();
-
-
+$titles = $testObj->getArticles();
 ?>
 
 
 <div class="card articles-section">
 
-    <?php  ?>
-        <h1> <?php $testObj->getArticles(); ?></h1>
-    <?php  ?>
+    <?php foreach ($titles as $title) :  ?>
+        <div class="article-pannel">
+            <a href="./articles/article.php?id=<?=$title['id'] ?>"><?= $title['title'] ?>
+                <p><?= $title['text'] ?></p>
+            </a>
 
+
+        </div>
+    <?php endforeach; ?>
 </div>

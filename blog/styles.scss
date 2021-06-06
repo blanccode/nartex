@@ -9,6 +9,7 @@
 }
 
 $main-bg-color: #1E3D49;
+$second-bg-color: #315462;
 $secondary-color: #264653;
 $accent-color: #F4A261;
 $text-color: #EFEFEF;
@@ -1041,4 +1042,40 @@ section {
         height: 100vh;
     }
 }
+.card.articles-section {
+    padding: .8em;
+    min-width: 25%;
+    
+    
+}
+.article-pannel {
+    padding: .5em;
+    background: $second-bg-color;
+    border-radius: 10px;
 
+    a {
+        color: $accent-color;
+    }
+    
+    :not(:first) {
+        margin-top: 1em;
+    }
+
+    p {
+       overflow: hidden;
+       text-overflow: ellipsis;
+       display: -webkit-box;
+       line-height: 20px;
+       /* fallback */
+       min-height: 3.4em;
+       /* fallback */
+       -webkit-line-clamp: 2;
+       /* number of lines to show */
+       -webkit-box-orient: vertical;
+    }
+}
+
+
+.article-pannel:not(:first-of-type) {
+    margin-top: 1em;
+}

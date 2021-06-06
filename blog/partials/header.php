@@ -11,15 +11,15 @@
 
     <nav id="nav" class="pointer nav">
         <div class="logo-container">
-            <img src="images/logo.png" alt="'Nartex'-Firm-Logo" class="logo" width="120px" height="auto">
+            <img src="/nartex/blog/images/logo.png" alt="'Nartex'-Firm-Logo" class="logo" width="120px" height="auto">
         </div>
 
         <ul class="flex-eng-container nav-links">
 
-            <li class="1"><a href="index.php">Home</a></li>
-            <li class="3"><a href="#about">Articles</a></li>
+            <li class="1"><a href="/nartex/blog/index.php">Home</a></li>
+            <li class="3"><a href="/nartex/blog/articles/index.php">Articles</a></li>
             <li class="4"><a href="#footer">Contact</a></li>
-            <li class="4"><a class="blog-link" href="../index.php">Business</a></li>
+            <li class="4"><a class="blog-link" href="/nartex">Business</a></li>
             <div id="dot"></div>
 
         </ul>

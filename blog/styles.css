@@ -976,4 +976,40 @@ section .articles-section p {
     height: 100vh;
   }
 }
+
+.card.articles-section {
+  padding: .8em;
+  min-width: 25%;
+}
+
+.article-pannel {
+  padding: .5em;
+  background: #315462;
+  border-radius: 10px;
+}
+
+.article-pannel a {
+  color: #F4A261;
+}
+
+.article-pannel :not(:first) {
+  margin-top: 1em;
+}
+
+.article-pannel p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;
+  /* fallback */
+  min-height: 3.4em;
+  /* fallback */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.article-pannel:not(:first-of-type) {
+  margin-top: 1em;
+}
 /*# sourceMappingURL=styles.css.map */
