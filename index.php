@@ -14,8 +14,8 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <!-- Hotjar Tracking Code for http://nartex-berlin.de/ -->
     <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () {
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
                 (h.hj.q = h.hj.q || []).push(arguments)
             };
             h._hjSettings = {
@@ -32,6 +32,7 @@
 </head>
 
 <body>
+  
     <div class="site-wrapper">
         <?php
         include_once './partials/header.php'
@@ -47,16 +48,13 @@
                 </h1>
                 <div class="btn-container">
                     <a href="#about" class="hero-button button-accent">learn more
-                        <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="21" height="26" fill="url(#pattern0)" />
                             <defs>
                                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                    <use xlink:href="#image0"
-                                        transform="translate(-0.119048) scale(0.0386905 0.03125)" />
+                                    <use xlink:href="#image0" transform="translate(-0.119048) scale(0.0386905 0.03125)" />
                                 </pattern>
-                                <image id="image0" width="32" height="32"
-                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOUlEQVRYw8WXwUrEQAyGE0+yiJh5GPEgnsQqi/iwUkQRlUX24MPMPwdRT8ZLhXUp26Sd2Bybof83/4RMhsgQABYAWgCXlvVVI+d8AOC5lKIAPgFc1Pw/D+z8kIhaZj79/aaqX0R0IyIPoQA55yNmvmPmk+1cB3EtIo9TAfbG5Jl5n4huAZyHObDhwj0zH/flazjBQwsMEB8dxFMIQDSECcABsRSRlxCAKAgXgAPiSkRWIQC1IYb6QG+klIqqNqr61rsr5gURtQDOQhxwOPHeOfEaAlADYjKAA6IRkfV2blQN1IzJAI4jWPflZy/C0Q4YxZe7xEc7ULMRzd6KXUfguIxM4i4Hoq5jkwOOgcQlbnJg1pFs1qH0P8SJhmvgO1J8J0BKqRBRo6p/OtnG02yyuCmiH6emiHye/wChgiSIMlDi6gAAAABJRU5ErkJggg==" />
+                                <image id="image0" width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOUlEQVRYw8WXwUrEQAyGE0+yiJh5GPEgnsQqi/iwUkQRlUX24MPMPwdRT8ZLhXUp26Sd2Bybof83/4RMhsgQABYAWgCXlvVVI+d8AOC5lKIAPgFc1Pw/D+z8kIhaZj79/aaqX0R0IyIPoQA55yNmvmPmk+1cB3EtIo9TAfbG5Jl5n4huAZyHObDhwj0zH/flazjBQwsMEB8dxFMIQDSECcABsRSRlxCAKAgXgAPiSkRWIQC1IYb6QG+klIqqNqr61rsr5gURtQDOQhxwOPHeOfEaAlADYjKAA6IRkfV2blQN1IzJAI4jWPflZy/C0Q4YxZe7xEc7ULMRzd6KXUfguIxM4i4Hoq5jkwOOgcQlbnJg1pFs1qH0P8SJhmvgO1J8J0BKqRBRo6p/OtnG02yyuCmiH6emiHye/wChgiSIMlDi6gAAAABJRU5ErkJggg==" />
                             </defs>
                         </svg>
                     </a>
@@ -68,13 +66,11 @@
                 <div class="btn-container">
                     <a href="#about" class="hero-button button-accent">DOWIEDZ SIĘ WIĘCEJ
 
-                        <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="21" height="26" fill="url(#pattern0)" />
                             <defs>
                                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                    <use xlink:href="#image0"
-                                        transform="translate(-0.119048) scale(0.0386905 0.03125)" />
+                                    <use xlink:href="#image0" transform="translate(-0.119048) scale(0.0386905 0.03125)" />
                                 </pattern>
 
                             </defs>
@@ -203,21 +199,20 @@
         </section>
 
         <footer id="footer">
-                <div class="icon-wrapper">
-                    <img src="images/email 1.png" alt="email svg for contact" class="icons"></img>
-                    <a class="footer-text" href="mailto:info@nartex-berlin.de">info@nartex-berlin.de</a>
-                </div>
-                <div class="icon-wrapper">
-                    <img src="images/telefon.png" alt="svg of phone for calls" class="icons"></img>
-                    <a class="footer-text" href="tel:03040785509">(030) 407 85 509</a>
-                </div>
-                <div class="icon-wrapper">
-                    <img src="images/lage.png" alt="an svg of lacation of business" id="location-icon"
-                        class="icons"></img>
-                    <div class="footer-text ">Martin-Luther-Str. 27 10777</div>
-                </div>
+            <div class="icon-wrapper">
+                <img src="images/email 1.png" alt="email svg for contact" class="icons"></img>
+                <a class="footer-text" href="mailto:info@nartex-berlin.de">info@nartex-berlin.de</a>
+            </div>
+            <div class="icon-wrapper">
+                <img src="images/telefon.png" alt="svg of phone for calls" class="icons"></img>
+                <a class="footer-text" href="tel:03040785509">(030) 407 85 509</a>
+            </div>
+            <div class="icon-wrapper">
+                <img src="images/lage.png" alt="an svg of lacation of business" id="location-icon" class="icons"></img>
+                <div class="footer-text ">Martin-Luther-Str. 27 10777</div>
+            </div>
 
-                <div class="firm-name">Nartex-Berlin GmbH & Co. KG ©</div>
+            <div class="firm-name">Nartex-Berlin GmbH & Co. KG ©</div>
 
         </footer>
 

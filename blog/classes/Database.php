@@ -6,6 +6,11 @@ class Database {
     private $password = "";
     private $dbName = "Nartex";
 
+    // private $host = "db5000979148.hosting-data.io";
+    // private $user = "dbu629547";
+    // private $password = "mazzaka12";
+    // private $dbName = "dbs850957";
+    
     protected function connect() {
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
         $pdo = new PDO($dsn, $this->user, $this->password);

@@ -1,17 +1,35 @@
+<?php
+
+// $mypath = "/Applications/XAMPP/xamppfiles/htdocs/nartex/blog/autoloader-abc.php";
+// require "$path";
+
+
+include('../../path.php');
+// set_include_path('.:/Applications/XAMPP/xamppfiles/lib/php');
+
+// include $_SERVER["DOCUMENT_ROOT"] . '/nartex/blog/autoloader.php';
+// include '../classes/Database.php';
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html class="eng" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="As a world player that specializes in the sale of stock clothing, &#34;Nartex&#34;
-    brings products like famouse brand-name clothes and stylish boots and shoes to your showrooms, Whether you are an online store, an outlet mall, a high-end chain or an
-    e-commerce business, come join a reliable wholesale supplier to cater to
-    the needs of your retail customers.">
+brings products like famouse brand-name clothes and stylish boots and shoes to your showrooms, Whether you are an online store, an outlet mall, a high-end chain or an
+e-commerce business, come join a reliable wholesale supplier to cater to
+the needs of your retail customers.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nartex Berlin | Blog</title>
-    <link id="stylesheet" rel="stylesheet" href="/nartex/blog/styles.css">
-    <link rel="shortcut icon" type="image/png" href="/nartex/blog/images/favicon.png">
+    <link id="stylesheet" rel="stylesheet" href=<?= $baseUrl . "/blog/styles.css" ?>>
+    <link rel="shortcut icon" type="image/png" href=<?= $baseUrl . "/blog/images/favicon.png" ?>>
     <!-- Hotjar Tracking Code for http://nartex-berlin.de/ -->
     <script>
         (function(h, o, t, j, a, r) {
@@ -35,33 +53,15 @@
 
 <body>
     <?php
-    include $_SERVER["DOCUMENT_ROOT"] . '/nartex/blog/partials/header.php'
+    include $root .  '/blog/partials/header.php'
+
     ?>
-    <section>
-        <img id="bubble-left" src="/nartex/blog/images/bubble-left.svg" alt="">
-
-        <div class="card mainblock">
-
-            <div class="flex-container">
-                <img class="article-image" src="/nartex/blog//images/clothes.jpg" alt="">
-                <p>
-                    As a world player that specializes in the sale of stock clothing, shoes and accessories, "Nartex" brings products sourced through our heart and mind to your showrooms. Our company was founded in.... and since then it is our quest to offer our customers consistent, quality graded clothing.
-                    <br>
-                    <br>
-                    We distribute all over Europe. Our regular and large consignments of closeouts, exports, liquidated textiles, excess goods and customer returns, enable us to supply merchandise of exceptional quality at unmatchable prices to our customers. Whether you are an online store, an outlet mall, a high-end chain or an e-commerce business, come join a reliable wholesale supplier to cater to the needs of your retail customers.
-                    <br>
-                    <br>
-                    Our treasure trove includes famous brand-name clothes and attire for every occasion and season..
-                    Shoes ranging from Cinderella's sandals to cozy stylish boots, and accessories so unique, that would ensure constant traffic to your store.
-                </p>
-            </div>
-
-        </div>
 
 
-        <img id="bubble-right" src="/nartex/blog/images/bubble-right.svg" alt="">
 
-    </section>
+    <?php
+    include $root .  "/blog/partials/article-section.php"
+    ?>
 
 
 </body>
