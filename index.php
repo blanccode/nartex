@@ -1,3 +1,27 @@
+<?php
+
+// define('ROOT_DIR', realpath(__DIR__ . '/..'));
+
+// $path = ROOT_DIR;
+include('path.php');
+
+include($root . '/blog/autoloader-abc.php');
+include($root . '/blog/classes/Database.php');
+include($root . '/blog/classes/Test.php');
+
+$testObj = new Test();
+$ratings = $testObj->getArticles("ratings");
+
+function printStar($number, $baseUrl)
+{
+    for ($i = 1; $i <= $number; $i++) {
+        echo "<img class=' star-icon ' src=" . $baseUrl . "/blog/images/star.png >";
+    }
+    echo '<br>';
+}
+
+?>
+
 <!DOCTYPE html>
 <html class="eng" lang="en">
 
@@ -32,7 +56,7 @@
 </head>
 
 <body>
-  
+
     <div class="site-wrapper">
         <?php
         include_once './partials/header.php'
@@ -198,30 +222,53 @@
 
         </section>
 
+        <div id="rating" class="ratings-section">
+            <h1>Our Ratings</h1>
+            <div class="ratings-container">
+                <?php foreach ($ratings as $key => $rating) : ?>
+                    <div class="ratings">
+                        <h4 style="color: white; margin-bottom:1em;"><?= $rating['name'] ?></h4>
+
+                        <?= printStar($rating['stars'], $baseUrl); ?>
+                        <p><?= $rating['comment'] ?></p>
+                    </div>
+
+                <?php endforeach ?>
+            </div>
+        </div>
+
         <footer id="footer">
-            <div class="icon-wrapper">
-                <img src="images/email 1.png" alt="email svg for contact" class="icons"></img>
-                <a class="footer-text" href="mailto:info@nartex-berlin.de">info@nartex-berlin.de</a>
+            <div class="icon-container">
+                <div class="icon-wrapper">
+                    <img src="images/email 1.png" alt="email svg for contact" class="icons"></img>
+                    <a class="footer-text" href="mailto:info@nartex-berlin.de">info@nartex-berlin.de</a>
+                </div>
+                <div class="icon-wrapper">
+                    <img src="images/telefon.png" alt="svg of phone for calls" class="icons"></img>
+                    <a class="footer-text" href="tel:03040785509">(030) 407 85 509</a>
+                </div>
+                <div class="icon-wrapper">
+                    <img src="images/lage.png" alt="an svg of lacation of business" id="location-icon" class="icons"></img>
+                    <div class="footer-text ">Martin-Luther-Str. 27 10777</div>
+                </div>
             </div>
-            <div class="icon-wrapper">
-                <img src="images/telefon.png" alt="svg of phone for calls" class="icons"></img>
-                <a class="footer-text" href="tel:03040785509">(030) 407 85 509</a>
-            </div>
-            <div class="icon-wrapper">
-                <img src="images/lage.png" alt="an svg of lacation of business" id="location-icon" class="icons"></img>
-                <div class="footer-text ">Martin-Luther-Str. 27 10777</div>
-            </div>
+
+
+
+
+
 
             <div class="firm-name">Nartex-Berlin GmbH & Co. KG ©</div>
 
         </footer>
 
-        <script src="app.js"></script>
-        <script id="jquery" defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
     </div>
 
+    <script src="app.js"></script>
+    <script id="jquery" defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
 </body>
+
 
 </html>

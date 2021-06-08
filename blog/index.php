@@ -37,7 +37,7 @@ the needs of your retail customers.">
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    <script defer src="app.js"></script>
+    <script defer src=<?= $baseUrl . "/blog/app.js" ?>></script>
 
 </head>
 
@@ -73,6 +73,7 @@ the needs of your retail customers.">
         <img id="bubble-right" src="images/bubble-right.svg" alt="">
 
     </section>
+    
 
 
 </body>

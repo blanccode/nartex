@@ -1,9 +1,10 @@
 <?php
-include('../path.php');
+// include('../path.php');
+// include('../../blog/classes/Test.php');
 spl_autoload_register('myAutoloader');
 
 function myAutoloader($className) {
-    $path2 = $root . "/blog/classes/";
+    $path2 = "/blog/classes/";
     $extension = ".php";
     $fileName = $path2 . $className . $extension;
 

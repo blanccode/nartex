@@ -5,8 +5,6 @@
           box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-family: 'Futura', sans-serif;
-  -webkit-transition: all ease-in-out 250ms;
-  transition: all ease-in-out 250ms;
 }
 
 html,
@@ -717,6 +715,7 @@ img:not(:first-child):not(.hero-wrap) {
   }
   .card {
     padding: 0em;
+    padding-bottom: 2em;
   }
   .section2 {
     padding-top: 4em;
@@ -899,9 +898,10 @@ footer .icon-wrapper .icons {
 
 .flex-container img.article-image {
   all: unset;
-  max-width: 670px;
+  height: auto;
   margin-top: 2em;
-  margin-left: -1.4em;
+  max-width: 100%;
+  height: auto;
 }
 
 section {
@@ -940,25 +940,6 @@ section .articles-section p {
   font-size: 1rem;
 }
 
-@media (max-width: 70em) {
-  section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  section .mainblock {
-    -webkit-box-flex: .8;
-        -ms-flex: .8;
-            flex: .8;
-    margin-right: 0em;
-  }
-  section .card {
-    padding: 0em 2em;
-    margin: 2em 0;
-  }
-}
-
 @media (min-width: 80em) {
   .card {
     padding: 2em 7em;
@@ -966,6 +947,12 @@ section .articles-section p {
 }
 
 @media (max-width: 30em) {
+  section {
+    padding: 2.5em 0;
+  }
+  div.card.mainblock {
+    margin-bottom: 0;
+  }
   .sticky .burger {
     margin-right: -2em;
   }
@@ -995,23 +982,24 @@ section .articles-section p {
 .card.articles-section {
   padding: .8em;
   min-width: 25%;
+  max-width: 100%;
 }
 
-.article-pannel {
+.card.articles-section .article-pannel {
   padding: .5em;
   background: #315462;
   border-radius: 10px;
 }
 
-.article-pannel a {
+.card.articles-section .article-pannel a {
   color: #F4A261;
 }
 
-.article-pannel :not(:first) {
+.card.articles-section .article-pannel :not(:first) {
   margin-top: 1em;
 }
 
-.article-pannel p {
+.card.articles-section .article-pannel p {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -1026,5 +1014,91 @@ section .articles-section p {
 
 .article-pannel:not(:first-of-type) {
   margin-top: 1em;
+}
+
+img.star-icon {
+  all: unset !important;
+  width: 20px !important;
+}
+
+.ratings-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ratings-container .ratings {
+  width: 100%;
+  height: 100%;
+  padding: .5em;
+  background: #315462;
+  border-radius: 10px;
+}
+
+.ratings-container .ratings p {
+  min-width: 20ch;
+}
+
+.ratings-container .ratings:not(:first-of-type) {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.ratings-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.ratings-container .ratings {
+  width: 100%;
+  min-width: 800px;
+  padding: .5em;
+  background: #315462;
+  border-radius: 10px;
+}
+
+.ratings-container .ratings:not(:first-of-type) {
+  margin-left: 1em;
+}
+
+@media (min-width: 60em) {
+  .flex-container img.article-image {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+}
+
+@media (max-width: 70em) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .mainblock {
+    -webkit-box-flex: .8;
+        -ms-flex: .8;
+            flex: .8;
+    margin-right: 0em;
+  }
+  section .card {
+    padding: 0em 2em;
+    padding-bottom: 2em;
+    margin: 2em 0;
+  }
+  section .article-pannel {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

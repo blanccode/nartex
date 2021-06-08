@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-family: 'Futura', sans-serif;
-    transition: all ease-in-out 250ms;
+    // transition: all ease-in-out 250ms;
 }
 
 $main-bg-color: #1E3D49;
@@ -729,6 +729,7 @@ img:not(:first-child):not(.hero-wrap) {
 
     .card {
         padding: 0em;
+        padding-bottom: 2em;
     }
 
     .section2 {
@@ -914,14 +915,17 @@ footer {
     // }
     img.article-image {
         all: unset;
-        max-width: 670px;
+        height: auto;
+        // max-width: 670px;
         margin-top: 2em;
-        margin-left: -1.4em;
+        max-width: 100%;
+        height: auto;
         // margin-right: 1em;
         // max-height: auto;
     }
 
 }
+
 section {
     display:flex;
     padding: 6em 2em;
@@ -957,24 +961,7 @@ section {
 
 
 
-@media (max-width:70em) {
 
-    section {
-        flex-direction:column;
-
-        .mainblock {
-            flex: .8;
-            margin-right: 0em;
-        }
-        .card {
-            padding: 0em 2em;
-            margin: 2em 0;
-        }
-    }
-    
-    
-   
-}
 @media (min-width:80em) {
     .card {
         padding: 2em 7em;
@@ -982,9 +969,14 @@ section {
 }
 
 @media (max-width: 30em) {
-    // nav {
-    //     // transform: transition all no;
-    // }
+    section {
+        padding: 2.5em 0;
+
+    }
+
+    div.card.mainblock {
+        margin-bottom: 0;
+    }
     .sticky .burger {
         margin-right: -2em;
     }
@@ -1016,37 +1008,118 @@ section {
 .card.articles-section {
     padding: .8em;
     min-width: 25%;
-    
+    max-width: 100%;
+
+    .article-pannel {
+        padding: .5em;
+        background: $second-bg-color;
+        border-radius: 10px;
+
+        a {
+            color: $accent-color;
+        }
+
+        :not(:first) {
+            margin-top: 1em;
+        }
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 20px;
+            /* fallback */
+            min-height: 3.4em;
+            /* fallback */
+            -webkit-line-clamp: 2;
+            /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+    }
     
 }
-.article-pannel {
-    padding: .5em;
-    background: $second-bg-color;
-    border-radius: 10px;
 
-    a {
-        color: $accent-color;
-    }
-    
-    :not(:first) {
-        margin-top: 1em;
-    }
-
-    p {
-       overflow: hidden;
-       text-overflow: ellipsis;
-       display: -webkit-box;
-       line-height: 20px;
-       /* fallback */
-       min-height: 3.4em;
-       /* fallback */
-       -webkit-line-clamp: 2;
-       /* number of lines to show */
-       -webkit-box-orient: vertical;
-    }
-}
 
 
 .article-pannel:not(:first-of-type) {
     margin-top: 1em;
+}
+
+img.star-icon {
+    all: unset !important;
+    width: 20px !important;
+}
+.ratings-container {
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+
+    .ratings {
+        width: 100%;
+        height: 100%;
+        padding: .5em;
+        background: #315462;
+        border-radius: 10px;
+        p {
+            min-width: 20ch;
+        }
+    }
+
+    .ratings:not(:first-of-type) {
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+
+}
+
+.ratings-container {
+    display: flex;
+    overflow-x: scroll;
+    align-items: stretch;
+
+    .ratings {
+        width: 100%;
+        min-width: 800px;
+        padding: .5em;
+        background: #315462;
+        border-radius: 10px;
+
+        // p {
+        //     min-width: 20ch;
+        // }
+    }
+
+    .ratings:not(:first-of-type) {
+        margin-left: 1em;
+    }
+
+}
+
+@media (min-width:60em) {
+    .flex-container img.article-image {
+        transform: translateX(-40px);
+    }
+}
+
+@media (max-width:70em) {
+
+    section {
+        flex-direction: column;
+
+        .mainblock {
+            flex: .8;
+            margin-right: 0em;
+        }
+
+        .card {
+            padding: 0em 2em;
+            padding-bottom: 2em;
+            margin: 2em 0;
+        }
+
+        .article-pannel {
+            max-width: max-content;
+        }
+    }
+
 }

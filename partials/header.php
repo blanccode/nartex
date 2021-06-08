@@ -19,6 +19,7 @@
             <li class="1"><a href="#home">Home</a></li>
             <li class="3"><a href="#about">About</a></li>
             <li class="2"><a href="#collection">Collection</a></li>
+            <li class="2"><a href="#rating">Ratings</a></li>
             <li class="4"><a href="#footer">Contact</a></li>
             <li class="4"><a class="blog-link" href="./blog/index.php">Blog</a></li>
             <div id="dot"></div>
@@ -29,6 +30,7 @@
             <li class="1"><a href="#home">Strona główna</a></li>
             <li class="3"><a href="#about">O nas</a></li>
             <li class="2"><a href="#collection">Kolekcja</a></li>
+            <li class="2"><a href="#rating">Ratings</a></li>
             <li class="4"><a href="#footer">Kontakt</a></li>
             <li class="4"><a class="blog-link" href="./blog/index.php">Blog</a></li>
             <div id="dot"></div>
