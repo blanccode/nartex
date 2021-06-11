@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // define('ROOT_DIR', realpath(__DIR__ . '/..'));
 
@@ -7,17 +8,35 @@ include('path.php');
 
 include($root . '/blog/autoloader-abc.php');
 include($root . '/blog/classes/Database.php');
-include($root . '/blog/classes/Test.php');
+include($root . '/blog/classes/Utils.php');
 
-$testObj = new Test();
-$ratings = $testObj->getArticles("ratings");
+$getTable = new Utils();
+$ratings = $getTable->getTable("ratings");
 
 function printStar($number, $baseUrl)
 {
     for ($i = 1; $i <= $number; $i++) {
-        echo "<img class=' star-icon ' src=" . $baseUrl . "/blog/images/star.png >";
+        echo "<img class=' star-icon ' src=" . $baseUrl . "/svg/star-solid.svg >";
     }
     echo '<br>';
+}
+
+include($root . '/blog/classes/Ratings.php');
+
+
+
+if (isset($_POST['submit-ratings'])) {
+
+    unset($_POST['submit-ratings']);
+    $rating = new Ratings();
+    $rating = $rating->postRating($_POST);
+    $_SESSION['status'] = "Thanks, your feeback helps alot!";
+    header('Location: ' . $baseUrl . '/#footer');
+    echo 'hi',
+
+    exit();
+
+    // dd($rating);
 }
 
 ?>
@@ -121,7 +140,7 @@ function printStar($number, $baseUrl)
                         mind to your showrooms. Our company was founded in.... and since then it
                         is our quest to offer our customers consistent, quality graded clothing.
                     </p>
-                    <a href="#footer" class="button button-accent">Contact</a>
+                    <a href="#footer" class="button btn mt">Contact</a>
 
                 </div>
                 <div class="pol-container container">
@@ -235,7 +254,32 @@ function printStar($number, $baseUrl)
 
                 <?php endforeach ?>
             </div>
+
+
+            <?php
+            include($root . '/modal.php');
+            ?>
+            <div class="btn-container">
+            <?php 
+            if(isset($_SESSION['status'])) {
+                echo "<h3>Thanks, your feedback helps us alot! </h3>";
+                unset($_SESSION['status']);
+            } else {
+                echo "<button class='modal-btn btn'>Please rate us&nbsp
+                        <img class=' star-icon ' src=" . $baseUrl . "/svg/thumbs-up-regular.svg >
+                    </button>";
+            }
+             
+             
+            ?>
+
+            </div>
+
+
+
         </div>
+
+
 
         <footer id="footer">
             <div class="icon-container">
@@ -265,7 +309,7 @@ function printStar($number, $baseUrl)
 
     </div>
 
-    <script src="app.js"></script>
+    <script defer src="<?= $baseUrl . '/app.js' ?>"></script>
     <script id="jquery" defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
 </body>

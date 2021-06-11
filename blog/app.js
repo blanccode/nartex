@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
     const burger = document.querySelector('.burger');
     const html = document.querySelector('html');
     const nav = document.querySelector('.nav-links');
-    const modal = document.querySelector('.nav');
+    const modal = document.querySelector('#nav');
     const links = document.querySelectorAll('.nav-links li');
     const a = nav.querySelectorAll('a');
 
@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
-                if (html.className == 'eng open') {
+                if (html.classList.contains("open") == true) {
                     
                     html.classList.toggle('open')
                     modal.classList.toggle('pointer')
@@ -46,9 +46,6 @@ window.addEventListener("load", function () {
 
     }
     
-
-
-
 
     function linkAnimationCheck(link, index) {
         if (link.style.animation) {
@@ -65,7 +62,8 @@ window.addEventListener("load", function () {
 
     // When the user scrolls the page, execute myFunction
     window.onscroll = function () { myFunction() };
-    // Get the header
+
+
     let header = document.getElementById("nav");
 
     // Get the offset position of the navbar
@@ -75,7 +73,7 @@ window.addEventListener("load", function () {
     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function myFunction() {
 
-        if (window.pageYOffset > 2* sticky) {
+        if (window.pageYOffset > sticky) {
             header.classList.add("sticky");
             html.classList.add('sticky');
         } else {
@@ -84,4 +82,18 @@ window.addEventListener("load", function () {
         }
     }
 
+        ///////////////////////////////
+
+    windowCloseBtn = document.querySelector('.card-menu-x-btn');
+    sectionCloseBtn = document.querySelector('.section-menu-x-btn');
+    sectionWindow = document.querySelector('.articles-section');
+    mainblock = document.querySelector('.mainblock');
+    console.log(windowCloseBtn)
+    windowCloseBtn.addEventListener('click', () => {
+        console.log('sdds')
+        mainblock.classList.toggle('opacity');
+    })
+    sectionCloseBtn.addEventListener('click', () => {
+        sectionWindow.classList.toggle('opacity');
+    })
 });

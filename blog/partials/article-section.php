@@ -4,34 +4,43 @@
 
 // $path = ROOT_DIR;
 
-include($root . '/blog/autoloader-abc.php');
-include($root . '/blog/classes/Database.php');
-include($root . '/blog/classes/Test.php');
+// include($root . '/blog/autoloader-abc.php');
+// include($root . '/blog/classes/Database.php');
+// include($root . '/blog/classes/Utils.php');
+// include($root . '/blog/classes/Posts.php');
 
-$testObj = new Test();
-$titles = $testObj->getArticles("articles");
-$ratings = $testObj->getArticles("ratings");
-$stars = $testObj->getTableRow("ratings", "stars");
+$table = new Utils();
+$posts = new Posts();
+$articles = $table->getTable("articles");
+$ratings = $table->getTable("ratings");
+$stars = $table->getTableRow("ratings", "stars");
 
 // dd($ratings);
 
 function printStar($number, $baseUrl)
-    {
-        for ($i = 1; $i <= $number; $i++) {
-            echo "<img class=' star-icon ' src=" . $baseUrl . "/blog/images/star.png >";
-        }
-        echo '<br>';
-
-
+{
+    for ($i = 1; $i <= $number; $i++) {
+        echo "<img class=' star-icon ' src=" . $baseUrl . "/blog/images/star.png >";
     }
+    echo '<br>';
+}
 
 ?>
 
 
-<div class="card articles-section">
+<div class="card articles-section ">
+    <div class="card-menu">
+        <div class="browser-dot-container">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+        </div>
 
-    <?php foreach ($titles as $title) :  ?>
-        <div class="article-pannel">
+
+        <div class="section-menu-x-btn card-menu-x-btn">x</div>
+    </div>
+    <?php foreach ($articles as $title) :  ?>
+        <div class="article-pannel box-shadow">
             <a href=<?= $baseUrl . "/blog/articles/article.php?id=" . $title['id'] ?>><?= $title['title'] ?>
                 <p><?= $title['text'] ?></p>
             </a>
@@ -40,17 +49,7 @@ function printStar($number, $baseUrl)
         </div>
     <?php endforeach; ?>
 
-    <div class="ratings-container">
-        <?php foreach ($ratings as $key => $rating) : ?>
-            <div class="ratings">
-                <h4 style="color: white; margin-bottom:1em;"><?= $rating['name'] ?></h4>
 
-                <?= printStar($rating['stars'], $baseUrl); ?>
-                <p><?= $rating['comment'] ?></p>
-            </div>
-
-        <?php endforeach ?>
-    </div>
 
 
 </div>

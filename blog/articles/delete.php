@@ -10,7 +10,7 @@ $testObj = new Posts();
 $article = $testObj->getPost();
 $article = $article[0];
 
-$id = $_GET['id'];
+$id = $_GET['delete_id'];
 // dd($id);
 
 
@@ -44,26 +44,13 @@ $id = $_GET['id'];
     <section>
 
 
-        <div class="card mainblock">
-            <div class="flex-container">
-                <h1 style="padding-bottom: 1em; "><?= $article['title'] ?></h1>
+        <div class="flex-container">
+            <h4>Are you sure want to delete this article?</h4>
 
-                <img class="article-image" src=<?= $baseUrl . "/blog/images/clothes.jpg" ?> alt="">
-                <p>
-                    <?= $article['text'] ?>
-
-                </p>
-
-                <div class="btn-container">
-                    <a class="delete-btn" href=<?= $baseUrl . '/blog/articles/delete.php?delete_id=' . $id  ?>>Delete</a>
-
-                    <a class="update-btn" href=<?= $baseUrl . '/blog/articles/update.php?id=' . $id  ?>>Bearbeiten</a>
-
-                </div>
-
-            </div>
+            <a class="delete-btn" href=<?= $baseUrl . '/blog/articles/index.php?delete_id=' . $id  ?>>Delete</a>
 
         </div>
+
 
 
 

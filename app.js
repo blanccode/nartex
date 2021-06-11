@@ -147,6 +147,29 @@ window.addEventListener("load", function () {
             html.classList.remove('sticky');
         }
     }
+    let modalBg = document.querySelector('.modal-bg');
+    let modalBtn = document.querySelector('.modal-btn');
+    let modalClose = document.querySelector('.modal-close');
+    let ratingBtn = document.querySelector('.rating-btn');
+    let ratingForm = document.querySelector('.rating-form');
+
+  
+    modalBtn.addEventListener('click', () => {
+        modalBg.classList.add('bg-active')
+        modalBg.classList.remove('pointer')
+    })
+    modalClose.addEventListener('click', () => {
+        modalBg.classList.remove('bg-active')
+        modalBg.classList.add('pointer')
+    })
+    // ratingBtn.addEventListener('click', (e) => {
+    //     // console.log('submitted btn')
+    //     // modalBtn.classList.add('hide');
+    //     // modalBtn.disabled = true;
+    //     // return true;
+
+    // })
+
 
     
 });

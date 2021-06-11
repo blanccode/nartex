@@ -1,7 +1,24 @@
 <?php
 
 include('../../path.php');
+// include($root . '/blog/autoloader-abc.php');
+include($root . '/blog/classes/Database.php');
+include($root . '/blog/classes/Utils.php');
+include($root . '/blog/classes/Posts.php');
 
+session_start();
+
+if (isset($_GET['delete_id'])) {
+    // dd($_GET);
+
+    $id = $_GET['delete_id'];
+    unset($_GET['delete_id']);
+    $posts = new Posts();
+    $posts->delete('articles', $id);
+    $_SESSION['type'] = "delete";
+    // header('Location:' . $baseUrl . '/blog/articles/index.php');
+    // exit();
+}
 
 ?>
 
@@ -20,22 +37,7 @@ the needs of your retail customers.">
     <link id="stylesheet" rel="stylesheet" href=<?= $baseUrl . "/blog/styles.css" ?>>
     <link rel="shortcut icon" type="image/png" href=<?= $baseUrl . "/blog/images/favicon.png" ?>>
     <!-- Hotjar Tracking Code for http://nartex-berlin.de/ -->
-    <script>
-        (function(h, o, t, j, a, r) {
-            h.hj = h.hj || function() {
-                (h.hj.q = h.hj.q || []).push(arguments)
-            };
-            h._hjSettings = {
-                hjid: 2275810,
-                hjsv: 6
-            };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script');
-            r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
+  
     <script defer src=<?= $baseUrl . "/blog/app.js" ?>></script>
 
 </head>
@@ -45,9 +47,12 @@ the needs of your retail customers.">
     include $root .  '/blog/partials/header.php'
     ?>
 
-    <main style="padding: 5em 0;">
+    <?php 
+    include $root . '/blog/partials/message.php';
+    ?>
+    <main class="box-shadow border" id="articles-mainsection" style=" padding: 1em 1em;">
         <?php
-        include $root .  "/blog/partials/article-section.php"
+        include $root .  "/blog/partials/article-section.php";
         ?>
 
     </main>

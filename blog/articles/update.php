@@ -1,27 +1,27 @@
 <?php
+
+session_start();
+
 include('../../path.php');
+include($root . '/blog/autoloader-abc.php');
 include($root . '/blog/classes/Database.php');
 include($root . '/blog/classes/Utils.php');
 include($root . '/blog/classes/Posts.php');
-include($root . '/blog/partials/scripts.php');
 
-    // $testObj = new Posts();
-    // $article = $testObj->getPost();
-    // $article = $article[0];
-session_start();
+$posts = new Posts();
+$article = $posts->getPost();
+$article = $article[0];
 
-if (isset($_POST['submit-article'])) {
-
-    unset($_POST['submit-article']);
-    $rating = new Posts();
-    $rating = $rating->postArticle('articles', $_POST);
-    // $_SESSION['message'] = "Article was succesfully added, thank you!";
-    $_SESSION['type'] = "success";
-    header('Location: ' . $baseUrl . '/blog/articles');
+if (isset($_POST['update-article'])) {
+    $id = $_POST['id'];
+    unset($_POST['update-article'], $_POST['id']);
+    // dd($_POST);
+    $posts->updatePost($id, $_POST);
+    $_SESSION['type'] = "update";
+    header('Location:' .$baseUrl. '/blog/articles/index.php');
     exit();
-
-    // dd($rating);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +30,9 @@ if (isset($_POST['submit-article'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="As a world player that specializes in the sale of stock clothing, &#34;Nartex&#34;
-brings products like famouse brand-name clothes and stylish boots and shoes to your showrooms, Whether you are an online store, an outlet mall, a high-end chain or an
-e-commerce business, come join a reliable wholesale supplier to cater to
-the needs of your retail customers.">
+    brings products like famouse brand-name clothes and stylish boots and shoes to your showrooms, Whether you are an online store, an outlet mall, a high-end chain or an
+    e-commerce business, come join a reliable wholesale supplier to cater to
+    the needs of your retail customers.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nartex Berlin | Blog</title>
@@ -53,21 +53,23 @@ the needs of your retail customers.">
 
         <div class="card mainblock">
 
-            <form action="create.php" method="POST">
+            <form action="update.php" method="POST">
+                <input name="id" type="hidden" value="<?= $article['id'] ?>">
+
                 <div>
                     <div>
-                        <input name="title" required type="text">
+                        <input name="title" required type="text" value="<?= $article['title'] ?>">
                     </div>
                     <div>
-                        <input name="meta" required type="text">
-                    </div>
-
-                    <div>
-                        <textarea name="text" id="" rows="30"></textarea>
+                        <input name="meta" required type="text" value="<?= $article['meta'] ?>">
                     </div>
 
                     <div>
-                        <button type="submit" name="submit-article">Submit</button>
+                        <textarea name="text" id="" rows="10"><?= $article['text'] ?></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" name="update-article">Submit</button>
                     </div>
                 </div>
 

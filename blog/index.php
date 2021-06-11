@@ -1,6 +1,9 @@
 <?php
 
-include("../path.php")
+include("../path.php");
+include($root . '/blog/classes/Database.php');
+include($root . '/blog/classes/Utils.php');
+include($root . '/blog/classes/Posts.php');
 
 ?>
 
@@ -46,9 +49,23 @@ the needs of your retail customers.">
     include $root .  '/blog/partials/header.php'
     ?>
     <section>
-        <img id="bubble-left" src="images/bubble-left.svg" alt="">
+        <img id="bubble-left" src="<?= $baseUrl . '/svg/bubble-left.svg' ?>" alt="">
 
         <div class="card mainblock">
+            <div class="card-menu">
+                <div class="browser-dot-container">
+                    <div id="dot-1"  class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <!-- <div class="tab-container">
+                    <div class="tab">wholesale</div>
+                    <div class="tab">lifestyle</div>
+                    <div class="tab">irgednwas</div>
+                </div> -->
+
+                <div class="card-menu-x-btn">x</div>
+            </div>
 
             <div class="flex-container">
                 <img class="article-image" src="./images/clothes.jpg" alt="">
@@ -70,10 +87,10 @@ the needs of your retail customers.">
         include $root .  "/blog/partials/article-section.php"
         ?>
 
-        <img id="bubble-right" src="images/bubble-right.svg" alt="">
+        <img id="bubble-right" src=<?= $baseUrl . '/svg/bubble-right.svg' ?> alt="">
 
     </section>
-    
+
 
 
 </body>
