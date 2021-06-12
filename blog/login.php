@@ -49,7 +49,7 @@ include("../path.php");
                 <input name="password" required type="text" placeholder="Password">
 
 
-                <button class="create-form-btn mb-1" type="submit" name="update-article">Update</button>
+                <button class="create-form-btn mb-1" type="submit" name="update-article">Login</button>
 
             </form>
         </div>

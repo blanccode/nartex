@@ -40,7 +40,7 @@ include("../../path.php");
             <div class="mt-1 mb-1 container">
                 <h4>Login as Admin:</h4>
             </div>
-            <form action="controller/admin.php" class="register-form" method="POST">
+            <form action=<?= $baseUrl. "/blog/controller/admin.php"  ?> class="register-form" method="POST">
 
                 <input name="id" type="hidden" value="">
 
