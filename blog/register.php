@@ -1,26 +1,12 @@
 <?php
 
-session_start();
+// session_start();
 
-include('../../path.php');
-include($root . '/blog/autoloader-abc.php');
-include($root . '/blog/classes/Database.php');
-include($root . '/blog/classes/Utils.php');
-include($root . '/blog/classes/Posts.php');
-
-$posts = new Posts();
-$article = $posts->getPost();
-$article = $article[0];
-
-if (isset($_POST['update-article'])) {
-    $id = $_POST['id'];
-    unset($_POST['update-article'], $_POST['id']);
-    // dd($_POST);
-    $posts->updatePost($id, $_POST);
-    $_SESSION['type'] = "update";
-    header('Location:' . $baseUrl . '/blog/articles/index.php');
-    exit();
-}
+include("../path.php");
+// include($root . '/blog/autoloader-abc.php');
+// include($root . '/blog/classes/Database.php');
+// include($root . '/blog/classes/Utils.php');
+// include($root . '/blog/classes/Posts.php');
 
 ?>
 
@@ -41,7 +27,6 @@ if (isset($_POST['update-article'])) {
     <!-- Hotjar Tracking Code for http://nartex-berlin.de/ -->
 
     <script defer src=<?= $baseUrl . "/blog/app.js" ?>></script>
-
 </head>
 
 <body>
@@ -50,32 +35,25 @@ if (isset($_POST['update-article'])) {
     ?>
 
     <div class="container mt-6">
-        <div class="container">
-            <h4>Update your Post</h4>
-        </div>
-        <div class="card form-container">
 
-            <form action="update.php" class="create-form" method="POST">
-                <input name="id" type="hidden" value="<?= $article['id'] ?>">
+        <div class="card register-form-container">
+            <div class="mt-1 mb-1 container">
+                <h4>Register:</h4>
+            </div>
+            <form action="update.php" class="register-form" method="POST">
 
+                <input name="id" type="hidden" value="">
 
-                <input name="title" required type="text" value="<?= $article['title'] ?>">
+                <input name="email" required type="text" placeholder="E-mail">
 
-                <input name="meta" required type="text" value="<?= $article['meta'] ?>">
+                <input name="password" required type="text" placeholder="Password">
+                <input name="password" required type="text" placeholder="Repeat your Password">
 
-                <textarea name="text" id="" rows="18"><?= $article['text'] ?></textarea>
 
                 <button class="create-form-btn mb-1" type="submit" name="update-article">Update</button>
 
             </form>
         </div>
-     
-
-
-        </section>
-
-
-
-
+    </div>
 
 </body>

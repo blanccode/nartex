@@ -41,8 +41,7 @@ $id = $_GET['delete_id'];
     include $root .  '/blog/partials/header.php'
     ?>
 
-    <section>
-
+    <div class="container mt-6">
 
         <div class="flex-container">
             <h4>Are you sure want to delete this article?</h4>
@@ -50,9 +49,6 @@ $id = $_GET['delete_id'];
             <a class="delete-btn" href=<?= $baseUrl . '/blog/articles/index.php?delete_id=' . $id  ?>>Delete</a>
 
         </div>
-
-
-
 
     </section>
 

@@ -29,27 +29,27 @@ function printStar($number, $baseUrl)
 
 
 <div class="card articles-section ">
+    
     <div class="card-menu">
+
         <div class="browser-dot-container">
             <div id="dot-1" class="browser-dot"></div>
             <div id="dot-2" class="browser-dot"></div>
             <div id="dot-3" class="browser-dot"></div>
         </div>
 
-
         <div class="section-menu-x-btn card-menu-x-btn">x</div>
+
     </div>
+
     <?php foreach ($articles as $title) :  ?>
+
         <div class="article-pannel box-shadow">
             <a href=<?= $baseUrl . "/blog/articles/article.php?id=" . $title['id'] ?>><?= $title['title'] ?>
                 <p><?= $title['text'] ?></p>
             </a>
-
-
         </div>
+
     <?php endforeach; ?>
-
-
-
 
 </div>

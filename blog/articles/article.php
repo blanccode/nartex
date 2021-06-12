@@ -45,23 +45,29 @@ $id = $_GET['id'];
 
 
         <div class="card mainblock">
-            <div class="flex-container">
-                <h1 style="padding-bottom: 1em; "><?= $article['title'] ?></h1>
+            <div class="articles-container">
+                <div class="flex-container">
+                    <h1 style="padding-bottom: 1em; "><?= $article['title'] ?></h1>
 
-                <img class="article-image" src=<?= $baseUrl . "/blog/images/clothes.jpg" ?> alt="">
-                <p>
-                    <?= $article['text'] ?>
+                    <div class="img-container">
+                        <img class="article-image" src=<?= $baseUrl . "/blog/images/clothes.jpg" ?> alt="">
 
-                </p>
+                    </div>
+                    <p>
+                        <?= $article['text'] ?>
 
-                <div class="btn-container">
-                    <a class="delete-btn" href=<?= $baseUrl . '/blog/articles/delete.php?delete_id=' . $id  ?>>Delete</a>
+                    </p>
 
-                    <a class="update-btn" href=<?= $baseUrl . '/blog/articles/update.php?id=' . $id  ?>>Bearbeiten</a>
+                    <div class="btn-container">
+                        <a class="delete-btn" href=<?= $baseUrl . '/blog/articles/delete.php?delete_id=' . $id  ?>>Delete</a>
+
+                        <a class="update-btn" href=<?= $baseUrl . '/blog/articles/update.php?id=' . $id  ?>>Bearbeiten</a>
+
+                    </div>
 
                 </div>
-
             </div>
+
 
         </div>
 

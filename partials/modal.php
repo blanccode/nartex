@@ -7,7 +7,7 @@
 
     <div class="modal">
         
-        <h2 style="color:white;">Please leave us a rating</h2>
+        <h3 style="color:white; margin-bottom: .5em;">Please leave us a rating</h3>
 
         <form class="rating-form" action="index.php" method="POST">
             <input name="name" required placeholder="Your name" type="name">

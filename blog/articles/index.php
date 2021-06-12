@@ -37,7 +37,7 @@ the needs of your retail customers.">
     <link id="stylesheet" rel="stylesheet" href=<?= $baseUrl . "/blog/styles.css" ?>>
     <link rel="shortcut icon" type="image/png" href=<?= $baseUrl . "/blog/images/favicon.png" ?>>
     <!-- Hotjar Tracking Code for http://nartex-berlin.de/ -->
-  
+
     <script defer src=<?= $baseUrl . "/blog/app.js" ?>></script>
 
 </head>
@@ -47,16 +47,19 @@ the needs of your retail customers.">
     include $root .  '/blog/partials/header.php'
     ?>
 
-    <?php 
+    <?php
     include $root . '/blog/partials/message.php';
     ?>
     <main class="box-shadow border" id="articles-mainsection" style=" padding: 1em 1em;">
         <?php
         include $root .  "/blog/partials/article-section.php";
         ?>
+        <div class="flex-container">
+            <a class="btn" href=<?= $baseUrl . '/blog/articles/create.php ' ?>>Write a Article</a>
+
+        </div>
 
     </main>
-
 
 
 

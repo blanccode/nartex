@@ -75,11 +75,11 @@ if (isset($_POST['submit-ratings'])) {
 </head>
 
 <body>
+    <?php
+    include_once './partials/header.php'
+    ?>
 
     <div class="site-wrapper">
-        <?php
-        include_once './partials/header.php'
-        ?>
 
         <img class="hero-wrap section1" src="images/kleider.webp" srcset="images/kleider-phone.webp 780w,
                     images/kleider.webp 1024w" sizes="(min-width: 760px)" width="100vw" height="80vh">
@@ -255,23 +255,22 @@ if (isset($_POST['submit-ratings'])) {
                 <?php endforeach ?>
             </div>
 
-
             <?php
-            include($root . '/modal.php');
+            include($root . '/partials/modal.php');
             ?>
             <div class="btn-container">
-            <?php 
-            if(isset($_SESSION['status'])) {
-                echo "<h3>Thanks, your feedback helps us alot! </h3>";
-                unset($_SESSION['status']);
-            } else {
-                echo "<button class='modal-btn btn'>Please rate us&nbsp
+                <?php
+                if (isset($_SESSION['status'])) {
+                    echo "<h3>Thanks, your feedback helps us alot! </h3>";
+                    unset($_SESSION['status']);
+                } else {
+                    echo "<button class='modal-btn btn'>Please rate us&nbsp
                         <img class=' star-icon ' src=" . $baseUrl . "/svg/thumbs-up-regular.svg >
                     </button>";
-            }
-             
-             
-            ?>
+                }
+
+
+                ?>
 
             </div>
 

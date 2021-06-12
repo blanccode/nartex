@@ -5,10 +5,16 @@ include($root . '/blog/classes/Utils.php');
 include($root . '/blog/classes/Posts.php');
 include($root . '/blog/partials/scripts.php');
 
-    // $testObj = new Posts();
-    // $article = $testObj->getPost();
-    // $article = $article[0];
+// $testObj = new Posts();
+// $article = $testObj->getPost();
+// $article = $article[0];
 session_start();
+
+if ($_SERVER['REQUEST_URI'] ===  '/nartex/blog/articles/create.php') {
+    if (true) {
+        header('Location:' .$baseUrl. '/blog/admin/login.php');
+    }
+}
 
 if (isset($_POST['submit-article'])) {
 
@@ -49,34 +55,26 @@ the needs of your retail customers.">
     include $root .  '/blog/partials/header.php'
     ?>
 
-    <section>
+    <div class="container mt-6">
+        <div class="container">
+            <h4>Create your Post</h4>
+        </div>
+        <div class="card form-container">
 
-        <div class="card mainblock">
+            <form class="create-form" action="create.php" method="POST">
+                <input name="title" required type="text">
+                <input name="meta" required type="text">
 
-            <form action="create.php" method="POST">
-                <div>
-                    <div>
-                        <input name="title" required type="text">
-                    </div>
-                    <div>
-                        <input name="meta" required type="text">
-                    </div>
+                <textarea name="text" id="" rows="18"></textarea>
 
-                    <div>
-                        <textarea name="text" id="" rows="30"></textarea>
-                    </div>
-
-                    <div>
-                        <button type="submit" name="submit-article">Submit</button>
-                    </div>
-                </div>
+                <button class="create-form-btn" type="submit" name="submit-article">Submit</button>
 
             </form>
         </div>
 
 
 
-    </section>
+    </div>
 
 
 

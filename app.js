@@ -66,7 +66,7 @@ window.addEventListener("load", function () {
 
         html.classList.toggle('open');
 
-        modal.classList.toggle('pointer')
+        // modal.classList.toggle('pointer')
 
         closeWithModal()
         // LINK ANIMATION
@@ -84,7 +84,7 @@ window.addEventListener("load", function () {
                 if (html.className == 'eng open') {
 
                     html.classList.toggle('open')
-                    modal.classList.toggle('pointer')
+                    // modal.classList.toggle('pointer')
 
                     links.forEach((link, index) => {
                         linkAnimationCheck(link, index)

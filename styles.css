@@ -68,6 +68,22 @@ img.hero-wrap {
   text-align: center;
 }
 
+.hero-button {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-radius: 30px;
+  border-style: solid;
+  padding: .2em 1.75em;
+  padding-top: -.5em;
+  color: var(--text-color);
+  padding-bottom: .6em;
+  margin-top: 2em;
+}
+
 .eng-container {
   display: none !important;
 }
@@ -582,7 +598,7 @@ li a {
 
 .card {
   background-color: #264653;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 2em;
 }
 
@@ -605,18 +621,19 @@ li a {
   top: 40px;
   left: 70px;
   z-index: -1;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .button {
   display: inline-block;
+  font-size: 1.25rem;
   text-decoration: none;
   font-weight: 500;
   padding: .4em 1.75em;
   padding-top: -.5em;
   color: #EFEFEF;
   margin-top: 2em;
-  margin-left: -.2em;
+  background-color: #FB8B24;
   border-radius: 20px;
 }
 
@@ -658,6 +675,7 @@ img:not(:first-child):not(.hero-wrap) {
     position: relative;
     top: -70px;
     left: -2em;
+    border-radius: 20px;
   }
   section .card1::before {
     left: 35px;
@@ -918,7 +936,7 @@ footer .icon-wrapper .icons {
   .sticky .burger {
     margin-right: -2em;
   }
-  nav .sticky {
+  nav.sticky {
     position: fixed;
     top: unset;
     bottom: 0px;
@@ -1156,7 +1174,7 @@ img.star-icon {
 .modal-bg form input,
 .modal-bg form textarea {
   width: 100%;
-  padding: .5em 1em;
+  padding: 1em 1em;
   margin: 1em 0;
   border: none;
   border-radius: 5px;
