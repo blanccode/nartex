@@ -1,16 +1,11 @@
 <?php
+// session_start();
 
 include('../../path.php');
-// include($root . '/blog/autoloader-abc.php');
-include($root . '/blog/classes/Database.php');
-include($root . '/blog/classes/Utils.php');
-include($root . '/blog/classes/Posts.php');
 
-$testObj = new Posts();
-$article = $testObj->getPost();
-$article = $article[0];
+include($root . '/blog/controller/articles.php');
 
-$id = $_GET['id'];
+
 // dd($id);
 
 
@@ -47,10 +42,10 @@ $id = $_GET['id'];
         <div class="card mainblock">
             <div class="articles-container">
                 <div class="flex-container">
-                    <h1 style="padding-bottom: 1em; "><?= $article['title'] ?></h1>
+                    <h1 style=" "><?= $article['title'] ?></h1>
 
                     <div class="img-container">
-                        <img class="article-image" src=<?= $baseUrl . "/blog/images/clothes.jpg" ?> alt="">
+                        <img class="article-image" src="<?= $baseUrl . '/blog/images/' . $article['image'] ?>" alt="">
 
                     </div>
                     <p>
@@ -58,13 +53,7 @@ $id = $_GET['id'];
 
                     </p>
 
-                    <div class="btn-container">
-                        <a class="delete-btn" href=<?= $baseUrl . '/blog/articles/delete.php?delete_id=' . $id  ?>>Delete</a>
-
-                        <a class="update-btn" href=<?= $baseUrl . '/blog/articles/update.php?id=' . $id  ?>>Bearbeiten</a>
-
-                    </div>
-
+                    
                 </div>
             </div>
 

@@ -1,10 +1,9 @@
 <?php
-
 // session_start();
 
 include("../path.php");
 // include($root . '/blog/autoloader-abc.php');
-// include($root . '/blog/classes/Database.php');
+include($root . '/blog/controller/users.php');
 // include($root . '/blog/classes/Utils.php');
 // include($root . '/blog/classes/Posts.php');
 
@@ -40,17 +39,22 @@ include("../path.php");
             <div class="mt-1 mb-1 container">
                 <h4>Register:</h4>
             </div>
-            <form action="update.php" class="register-form" method="POST">
+            <form action="register.php" class="register-form" method="POST">
 
-                <input name="id" type="hidden" value="">
+                <!-- <input name="id" type="hidden" value=""> -->
 
-                <input name="email" required type="text" placeholder="E-mail">
+                <input name="email" type="text" placeholder="E-mail" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '' ?>">
 
-                <input name="password" required type="text" placeholder="Password">
-                <input name="password" required type="text" placeholder="Repeat your Password">
+                <?php echo isset($errors['email']) ? '<div class="error-box ">' . $errors['email'] . '</div>' : '' ?>
+
+                <input name="password" type="text" placeholder="Password">
+                <?php echo isset($errors['password']) ? '<div class="error-box">' . $errors['password'] . '</div>' : '' ?>
+
+                <input name="pw-repeat" type="text" placeholder="Repeat your Password">
+                <?php echo isset($errors['pw-repeat']) ? '<div class="error-box">' . $errors['pw-repeat'] . '</div>' : '' ?>
 
 
-                <button class="create-form-btn mb-1" type="submit" name="update-article">Register</button>
+                <button class="create-form-btn mb-1" type="submit" name="register-user">Register</button>
 
             </form>
         </div>

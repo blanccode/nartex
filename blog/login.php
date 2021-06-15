@@ -3,10 +3,10 @@
 // session_start();
 
 include("../path.php");
-// include($root . '/blog/autoloader-abc.php');
-// include($root . '/blog/classes/Database.php');
-// include($root . '/blog/classes/Utils.php');
-// include($root . '/blog/classes/Posts.php');
+// include($root . '/blog/helpers/ValidateUser.php');
+include($root . '/blog/controller/users.php');
+
+
 
 ?>
 
@@ -40,16 +40,16 @@ include("../path.php");
             <div class="mt-1 mb-1 container">
                 <h4>Login:</h4>
             </div>
-            <form action="update.php" class="register-form" method="POST">
+            <form action="login.php" class="register-form" method="POST">
 
                 <input name="id" type="hidden" value="">
 
-                <input name="email" required type="text" placeholder="E-mail">
+                <input name="email"  type="text" placeholder="E-mail">
 
-                <input name="password" required type="text" placeholder="Password">
+                <input name="password"  type="text" placeholder="Password">
 
 
-                <button class="create-form-btn mb-1" type="submit" name="update-article">Login</button>
+                <button class="create-form-btn mb-1" type="submit" name="login-user">Login</button>
 
             </form>
         </div>

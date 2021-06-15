@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700,900');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
 
 * {
     margin: 0px;
@@ -8,7 +10,7 @@
     // transition: all ease-in-out 250ms;
 }
 
-$main-bg-color: #ffffff;
+$main-bg-color: #ffffff; 
 $second-bg-color: #ffffff;
 $secondary-color: rgba(241, 241, 241, .5);
 $nav-color:rgba(214, 214, 214, 0.432);
@@ -19,11 +21,27 @@ $btn-color: #FB8B24;
 $border-radius:6px;
 $border-color:#e6e7e8;
 $danger-color:#C73A30;
+$info-color:rgb(79, 79, 212);
+$error-bg:#d4665fa2;
+$error-color:#d45d55fd;
 $dblue-color:#19134F;
+$admin-nav-bg:hsl(254, 23%, 24%);
+$admin-bg:hsl(220, 43%, 96%);
+$admin-card-bg:#ffffff;
+$admin-color:hsl(219, 42%, 26%);
+$admin-color-dark:hsl(219, 35%, 39%);
+$admin-color-light:hsl(226, 27%, 34%);
+$admin-color-light1:hsl(219, 30%, 63%);
+$admin-color-light2:hsl(219, 47%, 80%);
+$admin-color-light3:hsl(225, 40%, 96%);
+$admin-bshadow:rgba(120, 143, 186, 0.6);
+$admin-ivory:hsl(77, 100%, 97%);
 
 
 
-
+h4 {
+    line-height: 1.5em;
+}
 
 
 html,
@@ -46,8 +64,17 @@ p {
     max-width: 100%;
     margin-top: 1em;
     line-height: 1.6em;
-    font-weight: 400;
+    font-weight: 300;
     color: $text-dark;
+}
+// .flex {
+//     display: flex;
+// }
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .container {
     width: 95%;
@@ -81,6 +108,16 @@ p {
     .mr-#{$i} {
         margin-right: #{$i}em;
     }
+}
+.error-box {
+    // border: 1px solid $error-color ;
+    border-radius: 2px;
+    padding: .5em;
+    // background-color: $error-color;
+    color: $error-color;
+    margin-top:.3em;
+    font-weight: 400;
+
 }
 
 .box-shadow {
@@ -131,8 +168,12 @@ p {
     color: #4BB543;
     margin: 0 auto;
     margin-top: 7em;
-
-
+}
+.info {
+    max-width: 70%;
+    color: $info-color;
+    margin: 0 auto;
+    margin-top: 7em;
 }
 
 .error {
@@ -405,7 +446,7 @@ span {
 
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .title {
@@ -1059,12 +1100,13 @@ footer {
     }
 }
 
+
 .flex-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     opacity: 1;
-        padding: 0 1em;
+    padding: 0 1em;
 
 
  
@@ -1074,6 +1116,7 @@ footer {
         margin-top: 2em;
         max-width: 100%;
         height: auto;
+        max-height:600px;
     
     }
 
@@ -1153,7 +1196,7 @@ section {
         display: block;
         max-height: max-content;
         width: max-content;
-        font-size: 2em;
+        font-size: 1.6em;
         font-weight: 300;
         padding: 0 .55em;
         padding-bottom: .2em;
@@ -1452,4 +1495,183 @@ img.star-icon {
     width: max-content;
     max-width: 100%;
     margin: 0 auto;
+}
+.articles-index .card.articles-section .article-pannel p {
+    -webkit-line-clamp: 5;
+    line-height: 25px;
+
+}
+
+
+///////////// ADMIN-SECTION ////////////////////////
+
+#site-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+// .close-nav nav.admin-nav-l {
+//     flex: 0;
+//     transition: flex .3s;
+// }
+
+.admin-burger {
+    width: 35px;
+ 
+}
+.opacity-0 {
+    opacity: 0;
+}
+
+nav.admin-nav-l {
+    position: sticky;
+    width: unset;
+    background: $admin-nav-bg;
+    flex: 3;
+    position: relative;
+    transition: all .3s;
+    max-width: 300px;
+    min-width: 130px;
+
+
+    .nav-icons {
+        width: 23px;
+    }
+    .icons-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo-container {
+        width: 100%;
+        display:flex;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    img {
+        width: 80px;
+        margin: 1em;
+    }
+        overflow: hidden;
+    ul {
+        padding: 0;
+        position: fixed;
+    }
+    a {
+    color: $admin-color-light2;
+    text-align: left;
+    padding-left:0;
+
+    }
+
+}
+ul.opacity-0 {
+    opacity: 0;
+    pointer-events: none;
+}
+nav.admin-nav-l.close-nav {
+    flex: 0;
+    // transition: flex .3s;
+    min-width: 0;
+    // transition: all .3s;
+
+}
+@media (min-width:40em) {
+    nav.admin-nav-l {
+        flex: 3;
+        // transition: width .3s;
+    }
+   
+}
+
+section.admin-section {
+    all: unset;
+    color: $admin-color-light1;
+    flex: 8;
+
+    .btn {
+        border: 3px solid $admin-color-dark;
+        background-color: rgba(187, 187, 187, 0);
+        font-size: 1rem;
+        color: $admin-color-dark;
+        font-weight: 600;
+        padding: .5em;
+        box-shadow: 0.335em 0.335em 0 $admin-color-dark;
+    }
+    // .border {
+    //     @extend .box-shadow;
+    //     border-left: 1px solid $admin-color-light1;
+    //     border-top: 1px solid $admin-color-light1;
+    //     border-right: 4px solid $admin-color-light2;
+    //     border-bottom: 4px solid $admin-color-light2;
+    // }
+
+    h3 {
+        color: $admin-color-dark;
+        font-size: 1.4rem;
+    }
+
+    .browser-dot {
+        width: 13px;
+        height: 13px;
+    }
+
+    .card-menu-x-btn {
+        color: $admin-color-light;
+    }
+
+     nav.admin-nav {
+         all: unset;
+         display: flex;
+         justify-content: space-around;
+         padding: .5em 0;
+        
+         .search-box {
+             display: flex;
+             align-items: center;
+             border: 1px solid $border-color;
+             border-radius: $border-radius;
+             padding: .5em 1em;
+         }
+     }
+     .articles-section .article-pannel a {
+         color: $admin-color-light2;
+     }
+
+    .card.mainblock {
+       all: unset;
+       background-color:$admin-bg;
+       width: 100%;
+    //    height: 100vh;
+       display: block;
+
+        .col-wrapper {
+            padding: 0 1em;
+        }
+        .admin-col-flex {
+            // display: flex;
+
+             .card {
+                 background-color: $admin-card-bg;
+                 width: 100%;
+                 padding: 1em;
+
+                 p {
+                     all: unset;
+                     color: $admin-color-dark;
+
+                 }
+             }
+             .card {
+                 margin-left: .5em;
+             }
+        }
+        .dia {
+            flex: 7;
+        }
+        .kp {
+            flex: 3;
+        }
+      
+    }
 }

@@ -12,8 +12,6 @@
 $table = new Utils();
 $posts = new Posts();
 $articles = $table->getTable("articles");
-$ratings = $table->getTable("ratings");
-$stars = $table->getTableRow("ratings", "stars");
 
 // dd($ratings);
 

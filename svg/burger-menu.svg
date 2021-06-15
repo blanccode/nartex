@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 451 384" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Artboard1" transform="matrix(1,0,0,1,1.62212,-66.8086)">
+        <rect x="-1.622" y="66.809" width="450.531" height="383.72" style="fill:none;"/>
+        <g id="burger-menu" transform="matrix(1,0,0,0.709195,-6.09649,23.8193)">
+            <path d="M432,416L82.332,416C73.555,416 66.332,423.223 66.332,432L66.332,464C66.332,472.777 73.555,480 82.332,480L432,480C440.777,480 448,472.777 448,464L448,432C448,423.223 440.777,416 432,416M432,288L28.9,288C20.123,288 12.9,295.223 12.9,304L12.9,336C12.9,344.777 20.123,352 28.9,352L432,352C440.777,352 448,344.777 448,336L448,304C448,295.223 440.777,288 432,288M432,160L177.211,160C168.434,160 161.211,167.223 161.211,176L161.211,208C161.211,216.777 168.434,224 177.211,224L432,224C440.777,224 448,216.777 448,208L448,176C448,167.223 440.777,160 432,160M177.211,160L177.211,160Z" style="fill:rgb(65,89,134);fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
