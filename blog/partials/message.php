@@ -7,7 +7,7 @@
         echo  "<div class='success'>Article was succesfully added, thank you!</div>";
      }
       elseif (isset($_SESSION['type']) && $_SESSION['type'] == 'error') {
-        echo  "<div class="  . $_SESSION['type'] . ">There has an error accurred pls try again.</div>";
+        echo  "<div class='error'>There has an error accurred pls try again.</div>";
      }
      elseif (isset($_SESSION['type']) && $_SESSION['type'] == 'update') {
         echo  "<div class='success'>Article was succesfully updated, thank you!</div>";

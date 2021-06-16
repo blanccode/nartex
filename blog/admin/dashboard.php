@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include("../../path.php");
 
 include($root . '/blog/controller/articles.php');
@@ -7,12 +7,12 @@ include($root . '/blog/controller/articles.php');
 
 
 // include($root . '/blog/controller/users.php');
-// if (!isset($_SESSION['admin'])) {
+if (!isset($_SESSION['admin'])) {
 
-//     // dd($_SESSION['admin']);
-//     header('Location:' . $baseUrl . '/blog/login.php');
-//     exit();
-// }
+    // dd($_SESSION['admin']);
+    header('Location:' . $baseUrl . '/blog/login.php');
+    exit();
+}
 
 
 // $article = getArticles();
@@ -51,16 +51,9 @@ the needs of your retail customers.">
 
         <section class="admin-section">
 
-            <nav class="admin-nav">
-                <div class="admin-burger">
-                    <img src="<?= $baseUrl . '/svg/burger-menu.svg' ?>" alt="">
-                </div>
-                <div class="search-box">searchbox
-                    <!-- <input type="text"> -->
-
-                </div>
-                <h3>name</h3>
-            </nav>
+            <?php
+            include($root . '/blog/admin/partials/top-nav.php')
+            ?>
 
             <div class="card mainblock">
                 <div class="card-menu">
@@ -105,13 +98,13 @@ the needs of your retail customers.">
                         </div>
                     </div>
                     <div class="admin-col-flex">
-                        
 
-                        <?php
-                        include($root . '/blog/admin/partials/article.php')
-                        ?>
+
+
                     </div>
-
+                    <?php
+                    include($root . '/blog/admin/partials/article.php')
+                    ?>
                 </div>
 
 

@@ -15,7 +15,7 @@
     <nav id="nav" class="pointer nav">
         <div class="inner-nav-wrapper radius" style="border-top-left-radius: 0; border-top-right-radius: 0;">
             <div class="logo-container">
-                <img src=<?= $baseUrl . "/blog/images/logo.png" ?> alt="'Nartex'-Firm-Logo" class="logo" width="120px" height="auto">
+                <img src=<?= $baseUrl . "/images/logo.png" ?> alt="'Nartex'-Firm-Logo" class="logo" width="120px" height="auto">
             </div>
 
             <ul class="flex-eng-container nav-links">

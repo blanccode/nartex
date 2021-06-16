@@ -9,6 +9,18 @@ class Users extends Utils {
             $sql = "SELECT * FROM users WHERE email ='$email'";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
+            $user = $stmt->fetch();
+            // dd($user);
+            return $user;
+        }
+    }
+    public function isAdmin($email)
+    {   
+        if (isset($email)) {
+            // $email = $_GET['id'];
+            $sql = "SELECT * FROM users WHERE email ='$email'";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute();
             $user = $stmt->fetchAll();
             return $user;
         }

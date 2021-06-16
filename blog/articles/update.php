@@ -5,7 +5,7 @@ session_start();
 include('../../path.php');
 include($root . '/blog/controller/articles.php');
 
-$article = getArticles();
+$article = getArticle();
 
 
 

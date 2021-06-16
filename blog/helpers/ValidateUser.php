@@ -6,7 +6,7 @@ class ValidateUser extends Users{
 
     private $input;
     private $errors = [];
-    private static $fields = ['email', 'password', 'pw-repeat'];
+    private static $fields = ['email', 'password'];
 
 
     public function __construct($input) 
@@ -16,6 +16,7 @@ class ValidateUser extends Users{
 
     public function checkInput() 
     {
+      
         foreach (self::$fields as $field) {
               if (!array_key_exists($field, $this->input)) {
                 trigger_error("$field is not present in input key");
@@ -25,7 +26,11 @@ class ValidateUser extends Users{
 
         $this->validateEmail();
         $pw = $this->validatePassword();
-        $this->checkPwMatch($pw);
+        if (isset($_POST['register-user'])) {
+          array_push(self::$fields, 'pw-repeat');
+          $this->checkPwMatch($pw);
+        }
+       
         return $this->errors;
 
         

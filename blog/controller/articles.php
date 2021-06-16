@@ -29,7 +29,7 @@ include($root . '/blog/classes/Posts.php');
         exit();
     }
 
-function getArticles() 
+function getArticle() 
 {
     $testObj = new Posts();
     $article = $testObj->getPost();
@@ -51,10 +51,14 @@ if (isset($_POST['submit-article'])) {
         $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
         // dd($destination);
 
-        if ($result) {
+        if (!$result) {
             $_POST['image'] = $imageName;
+            $_SESSION['type'] = "error";
+            dd($_SESSION);
+            header('Location:' . $baseUrl . '/blog/articles/index.php');
+            exit();
+
         } else {
-            //error
         }
     }
     // dd($_POST);
@@ -63,7 +67,7 @@ if (isset($_POST['submit-article'])) {
     // $_SESSION['message'] = "Article was succesfully added, thank you!";
     $_SESSION['type'] = "success";
     header('Location:' . $baseUrl . '/blog/articles/index.php');
-    // exit();
+    exit();
 }
 
 

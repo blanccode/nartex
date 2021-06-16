@@ -50,6 +50,22 @@ p {
   margin: 0 auto;
 }
 
+.pt-1 {
+  margin: 1em;
+}
+
+.pt-2 {
+  margin: 2em;
+}
+
+.pt-3 {
+  margin: 3em;
+}
+
+.pt-4 {
+  margin: 4em;
+}
+
 .m-1 {
   margin: 1em;
 }
@@ -146,7 +162,7 @@ p {
   font-weight: 400;
 }
 
-.box-shadow, .btn, .update-btn, .delete-btn, .create-form .create-form-btn, .register-form-container .create-form-btn {
+.box-shadow, .btn, .update-btn, .delete-btn, .register-form-container .create-form-btn {
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
@@ -703,7 +719,7 @@ li a {
           backdrop-filter: blur(2rem);
 }
 
-.border, .create-form input, .create-form textarea, .create-form button, .create-form .create-form-btn, .register-form-container input,
+.border, .create-form input, .create-form textarea, .create-form button, .register-form-container input,
 .register-form-container textarea,
 .register-form-container button, .register-form-container .create-form-btn {
   border: 1px solid #e6e7e8;
@@ -1185,11 +1201,27 @@ section .articles-section p {
 .create-form input, .create-form textarea, .create-form button {
   padding: 1em;
   margin-top: 1.5em;
+  color: #415986;
+  line-height: 1.56em;
+  letter-spacing: 1.7px;
+}
+
+.create-form input:focus, .create-form textarea:focus, .create-form button:focus {
+  outline: none !important;
+  border: 2px solid #b4c5e4;
+  -webkit-box-shadow: 0 0 5px #b4c5e4;
+          box-shadow: 0 0 5px #b4c5e4;
 }
 
 .create-form .create-form-btn {
-  color: #EFEFEF;
-  background: #19134F;
+  border: 3px solid #415986;
+  background-color: rgba(187, 187, 187, 0);
+  font-size: 1rem;
+  color: #415986;
+  font-weight: 600;
+  padding: .5em;
+  -webkit-box-shadow: 0.3em 0.3em 0 #415986;
+          box-shadow: 0.3em 0.3em 0 #415986;
 }
 
 .card-menu {
@@ -1509,10 +1541,7 @@ img.star-icon {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.admin-burger {
-  width: 35px;
+  min-height: 100vh;
 }
 
 .opacity-0 {
@@ -1523,7 +1552,7 @@ nav.admin-nav-l {
   position: -webkit-sticky;
   position: sticky;
   width: unset;
-  background: #362f4b;
+  background: #393253;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
@@ -1536,7 +1565,7 @@ nav.admin-nav-l {
 }
 
 nav.admin-nav-l .nav-icons {
-  width: 23px;
+  width: 17px;
 }
 
 nav.admin-nav-l .icons-container {
@@ -1607,6 +1636,7 @@ section.admin-section {
   -webkit-box-flex: 8;
       -ms-flex: 8;
           flex: 8;
+  background-color: #f1f3f9;
 }
 
 section.admin-section .btn {
@@ -1616,8 +1646,8 @@ section.admin-section .btn {
   color: #415986;
   font-weight: 600;
   padding: .5em;
-  -webkit-box-shadow: 0.335em 0.335em 0 #415986;
-          box-shadow: 0.335em 0.335em 0 #415986;
+  -webkit-box-shadow: 0.3em 0.3em 0 #415986;
+          box-shadow: 0.3em 0.3em 0 #415986;
 }
 
 section.admin-section h3 {
@@ -1642,6 +1672,7 @@ section.admin-section nav.admin-nav {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: .5em 0;
+  background-color: #ffffff;
 }
 
 section.admin-section nav.admin-nav .search-box {
@@ -1656,15 +1687,28 @@ section.admin-section nav.admin-nav .search-box {
   padding: .5em 1em;
 }
 
+section.admin-section .card.form-container {
+  background-color: #ffffff;
+}
+
+section.admin-section .articles-section {
+  background-color: #ffffff;
+}
+
 section.admin-section .articles-section .article-pannel a {
   color: #b4c5e4;
 }
 
 section.admin-section .card.mainblock {
   all: unset;
-  background-color: #f0f3f9;
   width: 100%;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section.admin-section .card.mainblock .col-wrapper {

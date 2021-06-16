@@ -1,7 +1,7 @@
 <?php
-    session_start();
+session_start();
 
-include('../../path.php');
+include('../../../path.php');
 include($root . '/blog/controller/articles.php');
 
 
@@ -34,28 +34,39 @@ include($root . '/blog/controller/articles.php');
 </head>
 
 <body>
-    <?php
-    include $root .  '/blog/partials/header.php'
-    ?>
+    <div id="site-wrapper">
+        <?php
+        include $root .  '/blog/admin/partials/header.php'
+        ?>
 
-    <div class="container mt-6">
-        <div class="container"> 
-            <h4>Create your Post</h4>
-        </div>
-        <div class="card form-container">
 
-            <form class="create-form" action="create.php" method="POST" enctype="multipart/form-data">
-                <input name="title" required type="text">
-                <input name="meta" required type="text">
-                <input name="image" type="file">
 
-                <textarea name="text" id="" rows="18"></textarea>
+            <div class="admin-section">
 
-                <button class="create-form-btn" type="submit" name="submit-article">Submit</button>
+                <?php
+                include $root .  '/blog/admin/partials/top-nav.php'
+                ?>
 
-            </form>
-        </div>
 
+                <div class="container mt-6">
+                    <div class="container">
+                        <h4>Create your Post</h4>
+                    </div>
+                    <div class="card form-container">
+
+                        <form class="create-form" action="create.php" method="POST" enctype="multipart/form-data">
+                            <input name="title" required type="text">
+                            <input name="meta" required type="text">
+                            <input name="image" type="file">
+
+                            <textarea name="text" id="" rows="18"></textarea>
+
+                            <button class="create-form-btn" type="submit" name="submit-article">Submit</button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
     </div>
-
 </body>

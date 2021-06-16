@@ -25,8 +25,8 @@ $info-color:rgb(79, 79, 212);
 $error-bg:#d4665fa2;
 $error-color:#d45d55fd;
 $dblue-color:#19134F;
-$admin-nav-bg:hsl(254, 23%, 24%);
-$admin-bg:hsl(220, 43%, 96%);
+$admin-nav-bg:hsl(253, 25%, 26%);
+$admin-bg:hsl(225, 40%, 96%);
 $admin-card-bg:#ffffff;
 $admin-color:hsl(219, 42%, 26%);
 $admin-color-dark:hsl(219, 35%, 39%);
@@ -84,6 +84,11 @@ p {
 // .mt {
 
 // }
+@for $i from 1 through 4 {
+    .pt-#{$i} {
+        margin: #{$i}em;
+    }
+}
 @for $i from 1 through 4 {
     .m-#{$i} {
         margin: #{$i}em;
@@ -1173,12 +1178,27 @@ section {
         padding: 1em;
         margin-top: 1.5em;
         @extend .border;
+        color:$admin-color-dark ;
+        line-height: 1.56em;
+        letter-spacing: 1.7px;
     }
+    
+    input:focus, textarea:focus ,button:focus {
+           outline: none !important;
+           border:2px solid $admin-color-light2;
+           box-shadow: 0 0 5px $admin-color-light2;
+    }
+
     .create-form-btn {
-        @extend .box-shadow;
-        @extend .border;
-        color: $text-color;
-        background: $dblue-color;
+        // @extend .box-shadow;
+        // @extend .border;
+         border: 3px solid $admin-color-dark;
+         background-color: rgba(187, 187, 187, 0);
+         font-size: 1rem;
+         color: $admin-color-dark;
+         font-weight: 600;
+         padding: .5em;
+         box-shadow: 0.3em 0.3em 0 $admin-color-dark;
     }
 }
 
@@ -1508,16 +1528,17 @@ img.star-icon {
 #site-wrapper {
     display: flex;
     flex-direction: row;
+    min-height: 100vh;
 }
 // .close-nav nav.admin-nav-l {
 //     flex: 0;
 //     transition: flex .3s;
 // }
 
-.admin-burger {
-    width: 35px;
+// .admin-burger {
+//     width: 35px;
  
-}
+// }
 .opacity-0 {
     opacity: 0;
 }
@@ -1534,7 +1555,7 @@ nav.admin-nav-l {
 
 
     .nav-icons {
-        width: 23px;
+        width: 17px;
     }
     .icons-container {
         display: flex;
@@ -1588,6 +1609,8 @@ section.admin-section {
     all: unset;
     color: $admin-color-light1;
     flex: 8;
+    background-color:$admin-color-light3;
+
 
     .btn {
         border: 3px solid $admin-color-dark;
@@ -1596,7 +1619,7 @@ section.admin-section {
         color: $admin-color-dark;
         font-weight: 600;
         padding: .5em;
-        box-shadow: 0.335em 0.335em 0 $admin-color-dark;
+        box-shadow: 0.3em 0.3em 0 $admin-color-dark;
     }
     // .border {
     //     @extend .box-shadow;
@@ -1620,19 +1643,28 @@ section.admin-section {
         color: $admin-color-light;
     }
 
-     nav.admin-nav {
-         all: unset;
-         display: flex;
-         justify-content: space-around;
-         padding: .5em 0;
-        
-         .search-box {
-             display: flex;
-             align-items: center;
-             border: 1px solid $border-color;
-             border-radius: $border-radius;
-             padding: .5em 1em;
-         }
+    nav.admin-nav {
+        all: unset;
+        display: flex;
+        justify-content: space-around;
+        padding: .5em 0;
+        background-color: $admin-card-bg;
+    
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid $border-color;
+            border-radius: $border-radius;
+            padding: .5em 1em;
+        }
+    }
+
+     .card.form-container {
+         background-color:$admin-card-bg;
+     }
+
+     .articles-section {
+         background-color: $admin-card-bg;
      }
      .articles-section .article-pannel a {
          color: $admin-color-light2;
@@ -1640,10 +1672,13 @@ section.admin-section {
 
     .card.mainblock {
        all: unset;
-       background-color:$admin-bg;
        width: 100%;
     //    height: 100vh;
-       display: block;
+       display: flex;
+       flex-direction: column;
+        //    height: 100vh;
+
+       
 
         .col-wrapper {
             padding: 0 1em;

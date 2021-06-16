@@ -18,7 +18,7 @@ $articles = $posts->getTable("articles");
                 <div class="btn-container">
                     <a class="" href=<?= $baseUrl . '/blog/articles/delete.php?delete_id=' . $article['id']  ?>>Delete</a>
 
-                    <a class="" href=<?= $baseUrl . '/blog/articles/update.php?id=' . $article['id'] ?>>Bearbeiten</a>
+                    <a class="" href=<?= $baseUrl . '/blog/admin/posts/update.php?id=' . $article['id'] ?>>Bearbeiten</a>
 
                 </div>
 
@@ -29,7 +29,7 @@ $articles = $posts->getTable("articles");
     <?php endforeach; ?>
 
         <div class="flex-container">
-            <a class="btn border" href=<?= $baseUrl . '/blog/articles/create.php ' ?>>Write a Article</a>
+            <a class="btn border" href=<?= $baseUrl . '/blog/admin/posts/create.php ' ?>>Write a Article</a>
         </div>
 
 </div>

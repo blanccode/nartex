@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 
 include('../../path.php');
 
@@ -7,6 +7,7 @@ include($root . '/blog/controller/articles.php');
 
 
 // dd($id);
+$article =  getArticle();
 
 
 ?>
@@ -53,7 +54,14 @@ include($root . '/blog/controller/articles.php');
 
                     </p>
 
-                    
+                    <?php if (isset($_SESSION['admin'])): ?>
+                    <div class="btn-container">
+                        <a class="" href=<?= $baseUrl . '/blog/articles/delete.php?delete_id=' . $article['id']  ?>>Delete</a>
+
+                        <a class="" href=<?= $baseUrl . '/blog/admin/posts/update.php?id=' . $article['id'] ?>>Bearbeiten</a>
+
+                    </div>
+                    <?php endif ?>
                 </div>
             </div>
 

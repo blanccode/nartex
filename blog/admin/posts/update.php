@@ -2,10 +2,10 @@
 session_start();
 
 
-include('../../path.php');
+include('../../../path.php');
 include($root . '/blog/controller/articles.php');
 
-$article = getArticles();
+$article = getArticle();
 
 
 
@@ -31,39 +31,60 @@ $article = getArticles();
 
 </head>
 
+
 <body>
-    <?php
-    include $root .  '/blog/partials/header.php'
-    ?>
+    <div id="site-wrapper">
 
-    <div class="container mt-6">
-        <div class="container">
-            <h4>Update your Post</h4>
-        </div>
-        <div class="card form-container">
-
-            <form action="update.php" class="create-form" method="POST" enctype="multipart/form-data">
-                <input name="id" type="hidden" value="<?= $article['id'] ?>">
+        <?php
+        include $root .  '/blog/admin/partials/header.php'
+        ?>
 
 
-                <input name="title" required type="text" value="<?= $article['title'] ?>">
+        <section class="admin-section">
 
-                <input name="meta" required type="text" value="<?= $article['meta'] ?>">
-                <input name="image" type="file" value="<?= $article['image'] ?>">
+            <?php
+            include($root . '/blog/admin/partials/top-nav.php')
+            ?>
 
-                <textarea name="text" id="" rows="18"><?= $article['text'] ?></textarea>
+            <div class="card mainblock">
+                <div class="card-menu">
+                    <div class="browser-dot-container">
+                        <div id="dot-1" class="browser-dot"></div>
+                        <div id="dot-2" class="browser-dot"></div>
+                        <div id="dot-3" class="browser-dot"></div>
+                    </div>
 
-                <button class="create-form-btn mb-1" type="submit" name="update-article">Update</button>
 
-            </form>
-        </div>
-     
+                    <div class="card-menu-x-btn">x</div>
+                </div>
+
+                <div class="container mt-1">
+                    <div class="container">
+                        <h4>Update your Post</h4>
+                    </div>
+                    <div class="card form-container">
+
+                        <form action="update.php" class="create-form" method="POST" enctype="multipart/form-data">
+                            <input name="id" type="hidden" value="<?= $article['id'] ?>">
 
 
+                            <input name="title" required type="text" value="<?= $article['title'] ?>">
+
+                            <input name="meta" required type="text" value="<?= $article['meta'] ?>">
+                            <input name="image" type="file" value="<?= $article['image'] ?>">
+
+                            <textarea name="text" id="" rows="18"><?= $article['text'] ?></textarea>
+
+                            <button class="create-form-btn mb-1" type="submit" name="update-article">Update</button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
 
-
-
-
+    </div>
 
 </body>
