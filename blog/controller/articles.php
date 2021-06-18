@@ -40,7 +40,7 @@ function getArticle()
 
     
 if (isset($_POST['submit-article'])) {
-    // dd($_FILES['image']);
+    // dd($_POST);
     unset($_POST['submit-article']);
     if (!empty($_FILES['image']['name'])) {
 
@@ -49,22 +49,24 @@ if (isset($_POST['submit-article'])) {
         $destination = $root . '/blog/images/' . $imageName;
 
         $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+
         // dd($destination);
 
         if (!$result) {
-            $_POST['image'] = $imageName;
             $_SESSION['type'] = "error";
             dd($_SESSION);
             header('Location:' . $baseUrl . '/blog/articles/index.php');
             exit();
 
-        } else {
         }
     }
-    // dd($_POST);
+    $_POST['image'] = $imageName;
+    // dd($_POST['image']);
+
     $rating = new Posts();
     $rating = $rating->postArticle('articles', $_POST);
     // $_SESSION['message'] = "Article was succesfully added, thank you!";
+    // dd($_POST);
     $_SESSION['type'] = "success";
     header('Location:' . $baseUrl . '/blog/articles/index.php');
     exit();
@@ -102,4 +104,3 @@ if (isset($_POST['update-article'])) {
 
 
 
-?>

@@ -29,7 +29,7 @@ include($root . '/blog/controller/articles.php');
     <link rel="shortcut icon" type="image/png" href=<?= $baseUrl . "/blog/images/favicon.png" ?>>
     <!-- Hotjar Tracking Code for http://nartex-berlin.de/ -->
 
-    <script defer src=<?= $baseUrl . "/blog/app.js" ?>></script>
+    <script defer src=<?= $baseUrl . "/blog/admin/assets/app.js" ?>></script>
 
 </head>
 

@@ -14,7 +14,7 @@
         </li>
         <li>
             <div class="icons-container">
-                <img style="width:20px;" class="nav-icons" src="<?= $baseUrl . '/svg/pen.svg' ?>" alt="">
+                <img  class="nav-icons" src="<?= $baseUrl . '/svg/pen.svg' ?>" alt="">
                 <a href=<?= $baseUrl . "/blog/articles/index.php" ?>>Articles</a>
 
             </div>
@@ -56,7 +56,7 @@
 
         <li>
             <div class="icons-container">
-                <img style="width:23px;" class="nav-icons" src="<?= $baseUrl . '/svg/cogs.svg' ?>" alt="">
+                <img  class="nav-icons" src="<?= $baseUrl . '/svg/cogs.svg' ?>" alt="">
                 <a class="blog-link" href=<?= $baseUrl . "/admin/settings" ?>>Settings</a>
 
             </div>

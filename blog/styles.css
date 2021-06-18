@@ -1204,6 +1204,7 @@ section .articles-section p {
   color: #415986;
   line-height: 1.56em;
   letter-spacing: 1.7px;
+  font-size: .85rem;
 }
 
 .create-form input:focus, .create-form textarea:focus, .create-form button:focus {
@@ -1544,28 +1545,48 @@ img.star-icon {
   min-height: 100vh;
 }
 
-.opacity-0 {
-  opacity: 0;
+.admin-burger img {
+  width: 35px;
 }
 
-nav.admin-nav-l {
-  position: -webkit-sticky;
-  position: sticky;
-  width: unset;
-  background: #393253;
+.close-nav {
+  -webkit-transition: all .3s;
+  transition: all .3s;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
   position: relative;
-  -webkit-transition: all .3s;
-  transition: all .3s;
   max-width: 300px;
   min-width: 130px;
+}
+
+nav.admin-nav-l.close-nav {
+  width: unset;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  max-width: 300px;
+  min-width: 130px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+nav.admin-nav-l {
+  background: #352f4b;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  width: 0px;
+  max-width: 0px;
+  min-width: 0px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   overflow: hidden;
 }
 
 nav.admin-nav-l .nav-icons {
-  width: 17px;
+  width: 15px;
 }
 
 nav.admin-nav-l .icons-container {
@@ -1575,13 +1596,10 @@ nav.admin-nav-l .icons-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 nav.admin-nav-l .logo-container {
-  width: 100%;
+  width: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1592,34 +1610,61 @@ nav.admin-nav-l .logo-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 1em;
+}
+
+nav.admin-nav-l .admin-logo {
+  max-width: 65px;
 }
 
 nav.admin-nav-l img {
-  width: 80px;
-  margin: 1em;
+  width: 100%;
 }
 
 nav.admin-nav-l ul {
-  padding: 0;
-  position: fixed;
+  padding: 1.3em;
+  padding-right: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+nav.admin-nav-l li {
+  margin: 0;
 }
 
 nav.admin-nav-l a {
   color: #b4c5e4;
   text-align: left;
-  padding-left: 0;
+  padding: 1.25em;
+  font-size: .8rem;
 }
 
-ul.opacity-0 {
-  opacity: 0;
-  pointer-events: none;
-}
-
-nav.admin-nav-l.close-nav {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
-  min-width: 0;
+@media (min-width: 400px) {
+  nav.admin-nav-l {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 60px;
+    min-width: 60px;
+  }
+  nav.admin-nav-l ul a {
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+  }
+  nav.admin-nav-l .nav-icons {
+    width: 17px;
+  }
+  nav.admin-nav-l .logo-container {
+    opacity: 0;
+  }
+  nav.admin-nav-l.opacity-1 ul a {
+    opacity: 1;
+  }
+  nav.admin-nav-l.opacity-1 .logo-container {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 40em) {
@@ -1666,9 +1711,6 @@ section.admin-section .card-menu-x-btn {
 
 section.admin-section nav.admin-nav {
   all: unset;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: .5em 0;
@@ -1715,19 +1757,21 @@ section.admin-section .card.mainblock .col-wrapper {
   padding: 0 1em;
 }
 
+section.admin-section .card.mainblock .admin-col-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 section.admin-section .card.mainblock .admin-col-flex .card {
+  margin: unset;
+  margin-top: 1em;
   background-color: #ffffff;
-  width: 100%;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 section.admin-section .card.mainblock .admin-col-flex .card p {
   all: unset;
   color: #415986;
-}
-
-section.admin-section .card.mainblock .admin-col-flex .card {
-  margin-left: .5em;
 }
 
 section.admin-section .card.mainblock .dia {
@@ -1740,5 +1784,27 @@ section.admin-section .card.mainblock .kp {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+}
+
+@media (min-width: 530px) {
+  .admin-col-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .admin-col-flex .card {
+    background-color: #ffffff;
+    width: 300px;
+  }
+  .admin-col-flex .card p {
+    all: unset;
+    color: #415986;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -6,16 +6,20 @@ include($root . '/blog/controller/articles.php');
 // include($root . '/blog/classes/Posts.php');
 
 
-// include($root . '/blog/controller/users.php');
+include($root . '/blog/controller/dashboard.php');
+
 if (!isset($_SESSION['admin'])) {
 
     // dd($_SESSION['admin']);
     header('Location:' . $baseUrl . '/blog/login.php');
     exit();
 }
-
-
+$userN = getUserNmbr();
+$postN = getPostsNmbr();
+$ratingN = getRatingsNmbr();
 // $article = getArticles();
+
+
 
 ?>
 
@@ -72,15 +76,15 @@ the needs of your retail customers.">
                     <div class="admin-col-flex">
                         <div class="card">
                             <p>Posts</p>
-                            <h3>30</h3>
+                            <h3><?= $postN ?? '' ?></h3>
                         </div>
                         <div class="card">
                             <p>User</p>
-                            <h3>80</h3>
+                            <h3><?= $userN ?? '' ?></h3>
                         </div>
                         <div class="card">
-                            <p>Comments</p>
-                            <h3>100</h3>
+                            <p>Ratings</p>
+                            <h3><?=  $ratingN ?? '' ?></h3>
                         </div>
                         <div class="card">
                             <p>Performance</p>

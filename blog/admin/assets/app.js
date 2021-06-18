@@ -2,11 +2,17 @@ window.addEventListener("load", function () {
 
     const burger = document.querySelector('.admin-burger');
     const navLeft = document.querySelector('.admin-nav-l');
-    const navUl = document.querySelector('.admin-ul');
-
+    const navLinks = document.querySelectorAll('.admin-ul a');
+    // console.log(navUl);
     burger.addEventListener('click', () => {
         navLeft.classList.toggle('close-nav');
-        navUl.classList.toggle('opacity-0');
+
+        navLeft.classList.toggle('opacity-1');
+
+        // navLinks.forEach(link => {
+        //     link.classList.toggle('opacity-1');
+
+        // });
     })
 
 });

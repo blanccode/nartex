@@ -1,6 +1,6 @@
 <?php 
 
-class Ratings extends Database{
+class Ratings extends Utils{
 
     public function executeQuery($sql, $data) {
         $stmt = $this->connect()->prepare($sql);
@@ -17,6 +17,17 @@ class Ratings extends Database{
         $stmt->fetchAll();
         return $stmt;
         // dd($stmt);
+    }
+
+    public function getRatings($table)
+    {
+        $sql = "SELECT * FROM $table ORDER BY id DESC";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        $titles = $stmt->fetchAll();
+
+
+        return ($titles);
     }
 
     public function postArticle($table, $data) {

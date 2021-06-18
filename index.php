@@ -6,12 +6,13 @@ session_start();
 // $path = ROOT_DIR;
 include('path.php');
 
-include($root . '/blog/autoloader-abc.php');
+// include($root . '/blog/autoloader-abc.php');
 include($root . '/blog/classes/Database.php');
 include($root . '/blog/classes/Utils.php');
+include($root . '/blog/classes/Ratings.php');
 
-$getTable = new Utils();
-$ratings = $getTable->getTable("ratings");
+$getTable = new Ratings();
+$ratings = $getTable->getRatings("ratings");
 
 function printStar($number, $baseUrl)
 {
@@ -21,7 +22,6 @@ function printStar($number, $baseUrl)
     echo '<br>';
 }
 
-include($root . '/blog/classes/Ratings.php');
 
 
 

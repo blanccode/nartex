@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 include($root . '/blog/classes/Database.php');
 include($root . '/blog/classes/Utils.php');
@@ -46,7 +46,7 @@ if (isset($_POST['register-user'])) {
             $users = new Users();
            $user =  $users->getUserMail($_POST['email']);
            if ($user && password_verify($_POST['password'], $user['password'])) {
-               echo 'you are logged in ';
+            //    echo 'you are logged in ';
                 // dd($user);
 
                redirectVerifyedUser($baseUrl,$user);
@@ -71,6 +71,7 @@ function registerUser($users) {
     $users->createUser('users', $_POST);
     
 }
+
 
 function redirectVerifyedUser($baseUrl,$user) {
     // $_SESSION['admin'] = 'Welcome admin';
