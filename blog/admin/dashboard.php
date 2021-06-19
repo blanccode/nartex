@@ -75,20 +75,49 @@ the needs of your retail customers.">
 
                     <div class="admin-col-flex">
                         <div class="card">
-                            <p>Posts</p>
-                            <h3><?= $postN ?? '' ?></h3>
+                            <div>
+                                <p>Posts</p>
+                                <h3><?= $postN ?? '' ?></h3>
+                            </div>
+                            <div class="icon-container">
+                                <img src="<?= $baseUrl . '/svg/pen2.svg' ?>" alt="">
+
+                            </div>
+
                         </div>
                         <div class="card">
-                            <p>User</p>
-                            <h3><?= $userN ?? '' ?></h3>
+
+                            <div>
+                                <p>User</p>
+                                <h3><?= $userN ?? '' ?></h3>
+                            </div>
+                            <div class="icon-container">
+                                <img src="<?= $baseUrl . '/svg/users.svg' ?>" alt="">
+
+                            </div>
+
                         </div>
                         <div class="card">
-                            <p>Ratings</p>
-                            <h3><?=  $ratingN ?? '' ?></h3>
+                            <div>
+                                <p>Ratings</p>
+                                <h3><?= $ratingN ?? '' ?></h3>
+                            </div>
+                            <div class="icon-container">
+                                <img src="<?= $baseUrl . '/svg/stars.svg' ?>" alt="">
+
+                            </div>
+
                         </div>
                         <div class="card">
-                            <p>Performance</p>
-                            <h3>100</h3>
+                            <div>
+                                <p>Performance</p>
+                                <h3>100</h3>
+                            </div>
+                            <div class="icon-container">
+                                <img src="<?= $baseUrl . '/svg/chart.svg' ?>" alt="">
+
+                            </div>
+
                         </div>
                     </div>
                     <div class="admin-col-flex">

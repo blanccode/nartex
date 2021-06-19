@@ -41,14 +41,25 @@ include($root . '/blog/controller/articles.php');
 
 
 
-            <div class="admin-section">
+        <section class="admin-section">
 
-                <?php
-                include $root .  '/blog/admin/partials/top-nav.php'
-                ?>
+            <?php
+            include $root .  '/blog/admin/partials/top-nav.php'
+            ?>
+            <div class="card mainblock">
+                <div class="card-menu">
+                    <div class="browser-dot-container">
+                        <div id="dot-1" class="browser-dot"></div>
+                        <div id="dot-2" class="browser-dot"></div>
+                        <div id="dot-3" class="browser-dot"></div>
+                    </div>
 
 
-                <div class="container mt-6">
+                    <div class="card-menu-x-btn">x</div>
+                </div>
+
+
+                <div class="container mt-1">
                     <div class="container">
                         <h4>Create your Post</h4>
                     </div>
@@ -67,6 +78,7 @@ include($root . '/blog/controller/articles.php');
                     </div>
 
                 </div>
-            </div>
+
+        </section>
     </div>
 </body>

@@ -1746,22 +1746,33 @@ section.admin-section {
             // width: 100%;
             flex-wrap: wrap;
 
-             .card {
-                margin: unset;
-                margin-top: 1em;
-                background-color: $admin-card-bg;
-                // min-width: 100%;
-                padding: 1.5em;
-
-                p {
-                    all: unset;
-                    color: $admin-color-dark;
-                }
-
-             }
             .card {
-            //  margin-left: .5em;
+            margin: unset;
+            margin-top: 1em;
+            background-color: $admin-card-bg;
+            // min-width: 100%;
+            padding: 1.5em;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                all: unset;
+                color: $admin-color-dark;
             }
+            
+            .icon-container {
+                padding: .5em;
+                border: 1px solid linear-gradient(to right bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .3));
+;
+
+                img {
+                    width: 30px;
+                }
+            }
+            
+
+            }
+          
         }
         .dia {
             flex: 7;
@@ -1780,16 +1791,39 @@ section.admin-section {
         flex-wrap: wrap;
 
          .card {
-             background-color: $admin-card-bg;
-            //  max-width: max-content;
-            width: 300px;
+            //  background-color: $admin-card-bg;
+            // //  max-width: max-content;
+            // width: 300px;
+            max-width: 50%;
+            flex: 0 0 50%;
             //  padding: 2em;
 
              p {
                  all: unset;
                  color: $admin-color-dark;
 
-             }  
+             }
+           
+
+         }
+    }
+}
+@media (min-width:1200px) {
+     .admin-col-flex {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+         .card {
+            //  background-color: $admin-card-bg;
+            // //  max-width: max-content;
+            // width: 300px;
+            max-width: 25%;
+            flex: 0 0 25%;
+            //  padding: 2em;
+
+           
 
          }
     }
